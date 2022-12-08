@@ -11,7 +11,7 @@ struct StartView: View {
    var body: some View {
       NavigationView {
          ZStack {
-            Image(Constants.Images.startBackground)
+            Image(Constants.Images.backgroundStart)
                .resizable()
                .ignoresSafeArea()
 
@@ -19,7 +19,9 @@ struct StartView: View {
                let screenWidth = geometry.size.width
 
                VStack {
+
                   // MARK: - Header buttons
+
                   HStack {
                      NavigationLink(destination: HighScoresView()) {
                         Image(Constants.Images.highScores)
@@ -33,6 +35,7 @@ struct StartView: View {
                   }
 
                   // MARK: - Logo
+
                   Spacer()
 
                   // iPhone SE 1st, iPhone 5, etc.
@@ -46,12 +49,25 @@ struct StartView: View {
                   }
 
                   // MARK: - Game buttons
-                  Spacer()
-                  VStack(spacing: 30) {
-                     TextButton(text: Constants.LocalisedString.play, font: Constants.Fonts.dangerXL, color: Constants.Colors.carnationRed, textColor: .white) //{}
-                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
-                     TextButton(text: Constants.LocalisedString.twoPlayers, font: Constants.Fonts.dangerL, textColor: .white) //{}
+                  Spacer()
+
+                  VStack(spacing: 30) {
+                     NavigationLink(destination: GameView()) {
+                        TextButton(
+                           text: Constants.LocalisedString.play,
+                           font: Constants.Fonts.dangerXL,
+                           color: Constants.Colors.carnation,
+                           textColor: .white
+                        )
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                     }
+
+                     TextButton(
+                        text: Constants.LocalisedString.twoPlayers,
+                        font: Constants.Fonts.dangerL,
+                        textColor: .white
+                     )
                      .padding(EdgeInsets(top: 0, leading: 60, bottom: 0, trailing: 60))
                   }
                   .padding(.bottom, 50)

@@ -10,30 +10,43 @@ import SwiftUI
 
 enum Constants {
 
+   // swiftlint:disable: line_length
+   enum Alphabet {
+      static let english   = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] // 26
+      static let croatian  = ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"] // 30
+   }
+
    enum Colors {
-      static let blackBox           = Color("blackBox")           // Color(red: 12/255, green: 39/255, blue: 49/255)
-      static let carnationRed       = Color(#colorLiteral(red: 0.9411764706, green: 0.2823529412, blue: 0.337254902, alpha: 1))                   // Color(red: 240/255, green: 72/255, blue: 86/255)
-      static let mintLeaf           = Color(#colorLiteral(red: 0, green: 0.8196078431, blue: 0.6862745098, alpha: 1))                   // Color(red: 0/255, green: 209/255, blue: 175/255)
-      static let sanJuan            = Color(#colorLiteral(red: 0.2705882353, green: 0.3450980392, blue: 0.3764705882, alpha: 1))                   // Color(red: 69/255, green: 88/255, blue: 96/255)
-      static let seeDeepBlue        = Color("seeDeepBlue")        // Color(red: 43/255, green: 62/255, blue: 71/255, alpha: 0.6)
-      static let stoneGranit        = Color("stoneGranit")        // Color(red: 62/255, green: 81/255, blue: 89/255, alpha: 0.8)
-      static let textColor          = Color("textColor")          //
-      static let toggleBackground   = Color("toggleBackground")   // Color(red: 55/255, green: 69/255, blue: 76/255)
-      static let watermelon         = Color(#colorLiteral(red: 1, green: 0.4508367777, blue: 0.4819011092, alpha: 1))                   // Color(red: 255/255, green: 90/255, blue: 104/255)
-      static let winRate            = Color("winRate")            //
-      static let woodBlue           = Color("woodBlue")           // Color(red: 32/255, green: 56/255, blue: 65/255)
+      static let azulPetroleo       = Color("azulPetroleo")       // Color(red: 054/255, green: 072/255, blue: 080/255)
+      static let blackBox           = Color("blackBox")           // Color(red: 012/255, green: 039/255, blue: 049/255)
+      static let bluewood           = Color("bluewood")           // Color(red: 036/255, green: 056/255, blue: 065/255)
+      static let carmine            = Color("carmine")            // Color(red: 168/255, green: 059/255, blue: 060/255)
+      static let carnation          = Color("carnation")          // Color(red: 240/255, green: 072/255, blue: 086/255)
+      static let dugong             = Color("dugong")             // Color(red: 112/255, green: 112/255, blue: 112/255)
+      static let ebonyClay          = Color("ebonyClay")          // Color(red: 034/255, green: 042/255, blue: 049/255)
+      static let galeForce          = Color("galeForce")          // Color(red: 255/255, green: 255/255, blue: 255/255)
+      static let juanSan            = Color("juanSan")
+      static let limedSpruce        = Color("limedSpruce")        // Color(red: 062/255, green: 081/255, blue: 089/255)
+      static let mintLeaf           = Color("mintLeaf")           // Color(red: 000/255, green: 209/255, blue: 175/255)
+      static let sanJuan            = Color("sanJuan")            // Color(red: 069/255, green: 088/255, blue: 096/255)
+      static let seaDeep            = Color("seaDeep")            // Color(red: 043/255, green: 062/255, blue: 071/255)
+      static let watermelon         = Color("watermelon")         // Color(red: 255/255, green: 115/255, blue: 123/255)
    }
 
    enum Fonts {
-      static let dangerM         = Font.custom("Another Danger - Demo", size: 18)
-      static let dangerL         = Font.custom("Another Danger - Demo", size: 28)
-      static let dangerXL        = Font.custom("Another Danger - Demo", size: 36)
+      static let dangerL            = Font.custom("Another Danger - Demo", size: 28)
+      static let dangerXL           = Font.custom("Another Danger - Demo", size: 36)
 
-      static let patrickHandXS   = Font.custom("PatrickHand-Regular", size: 16)
-      static let patrickHand     = Font.custom("PatrickHand-Regular", size: 20)
-      static let patrickHandM    = Font.custom("PatrickHand-Regular", size: 22)
-      static let patrickHandL    = Font.custom("PatrickHand-Regular", size: 24)
-      static let patrickHandXXXL = Font.custom("PatrickHand-Regular", size: 36)
+      static let patrickHand3XS     = Font.custom("PatrickHand-Regular", size: 14)
+      static let patrickHand2XS     = Font.custom("PatrickHand-Regular", size: 16)
+      static let patrickHandXS      = Font.custom("PatrickHand-Regular", size: 18)
+      static let patrickHandS       = Font.custom("PatrickHand-Regular", size: 20)
+      static let patrickHand        = Font.custom("PatrickHand-Regular", size: 22)
+      static let patrickHandM       = Font.custom("PatrickHand-Regular", size: 24)
+      static let patrickHandL       = Font.custom("PatrickHand-Regular", size: 26)
+      static let patrickHandXL      = Font.custom("PatrickHand-Regular", size: 36)
+      static let patrickHand2XL     = Font.custom("PatrickHand-Regular", size: 38)
+      static let patrickHand3XL     = Font.custom("PatrickHand-Regular", size: 40)
    }
 
    enum GameDifficulty {
@@ -44,20 +57,33 @@ enum Constants {
 
    enum Images {
       static let back                        = "back"
+      static let backgroundGame              = "background_game"
+      static let backgroundStart             = "background_start"
+      static let character1                  = "character1"
+      static let character2                  = "character2"
+      static let character3                  = "character3"
+      static let character4                  = "character4"
+      static let character5                  = "character5"
+      static let character6                  = "character6"
+      static let character7                  = "character7"
+      static let character8                  = "character8"
       static let check                       = "check"
       static let forward                     = "forward"
       static let forwardRed                  = "forward_red"
       static let github                      = "github"
       static let highScores                  = "high_scores"
+      static let info                        = "info"
       static let linkedIn                    = "linkedin"
       static let lightbulbFill               = "lightbulb.fill"
       static let lightbulbSlashFill          = "lightbulb.slash.fill"
       static let logoAppName                 = "logo_app_name"
       static let logoAppMock                 = "logo_app_mock"
+      static let mePortrait                  = "me_portrait"
       static let moonFill                    = "moon.fill"
+      static let score                       = "score"
       static let settings                    = "settings"
-      static let startBackground             = "start_background"
       static let sunMaxFill                  = "sun.max.fill"
+      static let timer                       = "timer"
    }
 
    enum LocalisedString {
@@ -69,29 +95,48 @@ enum Constants {
       static let contactReportInfo           = "CONTACT_REPORT_INFO"
       static let croatian                    = "CROATIAN"
       static let darkMode                    = "DARK_MODE"
+      static let date                        = "DATE"
+      static let difficulty                  = "DIFFICULTY"
       static let difficultyExample           = "DIFFICULTY_EXAMPLE";             #warning("ne koristim")
       static let difficultyLevel             = "DIFFICULTY_LEVEL"
+      static let difficultyEasy              = "DIFFICULTY_EASY"
+      static let difficultyMedium            = "DIFFICULTY_MEDIUM"
+      static let difficultyHard              = "DIFFICULTY_HARD"
       static let easy                        = "EASY"
       static let english                     = "ENGLISH"
       static let featureRequest              = "FEATURE_REQUEST"
       static let hard                        = "HARD"
       static let highScores                  = "HIGH_SCORES"
+      static let highestScore                = "HIGHEST_SCORE"
+      static let hits                        = "HITS"
       static let language                    = "LANGUAGE"
       static let listOfAllWords              = "LIST_OF_ALL_WORDS"
+      static let longestGame                 = "LONGEST_GAME"
+      static let losses                      = "LOSSES"
       static let medium                      = "MEDIUM"
       static let misc                        = "MISC"
       static let options                     = "OPTIONS"
+      static let overview                    = "OVERVIEW"
+      static let perfectWins                 = "PERFECT_WINS"
       static let play                        = "PLAY"
+      static let played                      = "PLAYED"
+      static let ratio                       = "RATIO"
       static let reportBug                   = "REPORT_BUG"
+      static let score                       = "SCORE"
       static let select                      = "SELECT"
       static let selectGameDifficultyLvl     = "SELECT_GAME_DIFFICULTY_LVL"
       static let settings                    = "SETTINGS"
       static let showHint                    = "SHOW_HINT"
       static let statistics                  = "STATISTICS"
+      static let time                        = "TIME"
       static let topFiveScores               = "TOP_FIVE_SCORES"
+      static let totalTime                   = "TOTAL_TIME"
       static let twoPlayers                  = "TWO_PLAYERS"
+      static let winRate                     = "WIN_RATE"
+      static let wins                        = "WINS"
       static let words                       = "WORDS"
       static let wordsLanguage               = "WORDS_LANGUAGE"
+      static let wrongGuesses                = "WRONG_GUESSES"
    }
 
    enum NonLocalisedString {

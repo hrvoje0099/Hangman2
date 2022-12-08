@@ -8,43 +8,28 @@
 import SwiftUI
 
 struct TextButton: View {
-   var text: String
-   var font: Font
+   let text: String
+   let font: Font
    var color: Color?
    var textColor: Color?
-//   var action: () -> Void
-   
-    var body: some View {
-       Text(LocalizedStringKey(text))
-          .padding([.top, .bottom], 7)
-          .font(font)
-          .frame(maxWidth: .infinity)
-          .foregroundColor(textColor ?? Constants.Colors.textColor)
-          .background(color ?? Color.accentColor)
-          .cornerRadius(15)
-//       Button {
-////          action()
-//       } label: {
-//          Text(LocalizedStringKey(text))
-//             .font(font)
-//             .frame(maxWidth: .infinity)
-//             .foregroundColor(textColor ?? Constants.Colors.textColor)
-//       }
-//       .buttonStyle(.borderedProminent)
-//       .tint(color)
-    }
+
+   var body: some View {
+      Text(LocalizedStringKey(text))
+         .padding([.top, .bottom], 7)
+         .font(font)
+         .frame(maxWidth: .infinity)
+         .foregroundColor(textColor ?? Constants.Colors.galeForce)
+         .background(color ?? Color.accentColor)
+         .cornerRadius(15)
+   }
 }
 
 struct TextButton_Previews: PreviewProvider {
-    static var previews: some View {
-       VStack {
-          TextButton(text: "Text", font: Constants.Fonts.dangerXL, color: Constants.Colors.carnationRed)/* {
-             print("With custom color.")
-          }*/
-
-          TextButton(text: "Text", font: Constants.Fonts.dangerXL) /*{
-             print("With default color.")
-          }*/
-       }
-    }
+   static var previews: some View {
+      VStack {
+         // swiftlint:disable: line_length
+         TextButton(text: Constants.LocalisedString.play, font: Constants.Fonts.dangerXL, color: Constants.Colors.carnation)
+         TextButton(text: Constants.LocalisedString.twoPlayers, font: Constants.Fonts.patrickHand3XL)
+      }
+   }
 }

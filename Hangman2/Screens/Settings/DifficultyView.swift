@@ -8,37 +8,48 @@
 import SwiftUI
 
 struct DifficultyView: View {
-   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-   
+   @Environment(\.dismiss) var dismiss
+
    @State private var isEasy = false
    @State private var isMedium = true
    @State private var isHard = false
-   
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.difficultyLevel) {
-            self.presentationMode.wrappedValue.dismiss()
+            dismiss()
          }
-         
+
          Section {
-            CheckgRowView(title: Constants.GameDifficulty.easy.localised, isSelected: isSelected(difficulty: Constants.GameDifficulty.easy.localised)) {
+            CheckRowView(
+               title: Constants.GameDifficulty.easy.localised,
+               isSelected: isSelected(difficulty: Constants.GameDifficulty.easy.localised)
+            ) {
                changeGameDifficulty(to: Constants.GameDifficulty.easy)
             }
 
-            CheckgRowView(title: Constants.GameDifficulty.medium.localised, isSelected: isSelected(difficulty: Constants.GameDifficulty.medium.localised)) {
+            CheckRowView(
+               title: Constants.GameDifficulty.medium.localised,
+               isSelected: isSelected(difficulty: Constants.GameDifficulty.medium.localised)
+            ) {
                changeGameDifficulty(to: Constants.GameDifficulty.medium)
             }
 
-            CheckgRowView(title: Constants.GameDifficulty.hard.localised, isSelected: isSelected(difficulty: Constants.GameDifficulty.hard.localised)) {
+            CheckRowView(
+               title: Constants.GameDifficulty.hard.localised,
+               isSelected: isSelected(difficulty: Constants.GameDifficulty.hard.localised)
+            ) {
                changeGameDifficulty(to: Constants.GameDifficulty.hard)
             }
          } header: {
-            SectionHeaderView(name: Constants.LocalisedString.selectGameDifficultyLvl)
+            SectionHeaderView(name: Constants.LocalisedString.selectGameDifficultyLvl, withInfo: true) {
+               print("Difficulty info popup")
+            }
          }
-         
+
          Spacer()
       }
-      .background(Constants.Colors.woodBlue)
+      .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
    }

@@ -8,77 +8,64 @@
 import SwiftUI
 
 struct StatisticsView: View {
-   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-   
+   @Environment(\.dismiss) var dismiss
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.statistics) {
-            self.presentationMode.wrappedValue.dismiss()
+            dismiss()
          }
 
-         SectionHeaderView(name: "WIN RATE")
+         // MARK: - Win Rate
 
+         SectionHeaderView(name: Constants.LocalisedString.winRate, withInfo: true) {
+            print("win rate info")
+         }
+
+         #warning("Rate value i progress su hardkodirane vrijednosti!")
          HStack {
             CircularProgressView(progress: 0.50)
                .frame(width: 140, height: 140)
-               .padding(18)
+               .padding(15)
 
             VStack {
                VStack(spacing: 5) {
-                  HStack {
-                     Text("Difficulty: Easy")
-                        .font(Constants.Fonts.patrickHandXS)
-                     Spacer()
-                     Text("100%")
-                        .font(Constants.Fonts.patrickHandXS)
-                  }
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 100)
                   SegmentedProgressView(
                      progress: 100,
                      length: 6,
-                     startColor: Constants.Colors.carnationRed,
+                     startColor: Constants.Colors.carnation,
                      endColor: Constants.Colors.mintLeaf,
-                     spaceColor: Constants.Colors.seeDeepBlue,
-                     backgroundColor: Constants.Colors.toggleBackground
+                     spaceColor: Constants.Colors.seaDeep,
+                     backgroundColor: Constants.Colors.azulPetroleo
                   )
                }
 
                Spacer()
 
                VStack(spacing: 5) {
-                  HStack {
-                     Text("Difficulty: Medium")
-                        .font(Constants.Fonts.patrickHandXS)
-                     Spacer()
-                     Text("54%")
-                        .font(Constants.Fonts.patrickHandXS)
-                  }
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 54)
                   SegmentedProgressView(
                      progress: 54,
                      length: 6,
-                     startColor: Constants.Colors.carnationRed,
+                     startColor: Constants.Colors.carnation,
                      endColor: Constants.Colors.mintLeaf,
-                     spaceColor: Constants.Colors.seeDeepBlue,
-                     backgroundColor: Constants.Colors.toggleBackground
+                     spaceColor: Constants.Colors.seaDeep,
+                     backgroundColor: Constants.Colors.azulPetroleo
                   )
                }
 
                Spacer()
 
                VStack(spacing: 5) {
-                  HStack {
-                     Text("Difficulty: Hard")
-                        .font(Constants.Fonts.patrickHandXS)
-                     Spacer()
-                     Text("25%")
-                        .font(Constants.Fonts.patrickHandXS)
-                  }
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 25)
                   SegmentedProgressView(
                      progress: 25,
                      length: 6,
-                     startColor: Constants.Colors.carnationRed,
+                     startColor: Constants.Colors.carnation,
                      endColor: Constants.Colors.mintLeaf,
-                     spaceColor: Constants.Colors.seeDeepBlue,
-                     backgroundColor: Constants.Colors.toggleBackground
+                     spaceColor: Constants.Colors.seaDeep,
+                     backgroundColor: Constants.Colors.azulPetroleo
                   )
                }
             }
@@ -87,13 +74,59 @@ struct StatisticsView: View {
 
          }
          .frame(maxWidth: .infinity, alignment: .leading)
-         .background(Constants.Colors.seeDeepBlue)
+         .background(Constants.Colors.seaDeep)
          .cornerRadius(15)
-         .padding(EdgeInsets(top: 15, leading: 23, bottom: 0, trailing: 23))
+         .padding(EdgeInsets(top: 15, leading: 23, bottom: 10, trailing: 23))
+
+         // MARK: - Overview
+
+         SectionHeaderView(name: Constants.LocalisedString.overview)
+
+         #warning("Value vrijednosti u karticama su hardoded!")
+         LazyVGrid(
+            columns: [
+               GridItem(.flexible()),
+               GridItem(.flexible()),
+               GridItem(.flexible())
+            ], spacing: 10
+         ) {
+            OverviewCardView(title: Constants.LocalisedString.played, value: "532")
+            OverviewCardView(title: Constants.LocalisedString.wins, value: "369")
+
+            OverviewCardView(
+               title: Constants.LocalisedString.losses,
+               value: "152",
+               dividerColor: Constants.Colors.carnation,
+               startColor: Constants.Colors.carnation.opacity(0.2),
+               endColor: Constants.Colors.bluewood
+            )
+
+            OverviewCardView(title: Constants.LocalisedString.perfectWins, value: "11")
+            OverviewCardView(title: Constants.LocalisedString.longestGame, value: "2h 12m 55s")
+            OverviewCardView(title: Constants.LocalisedString.highestScore, value: "5321")
+            OverviewCardView(title: Constants.LocalisedString.hits, value: "1073")
+
+            OverviewCardView(
+               title: Constants.LocalisedString.wrongGuesses,
+               value: "221",
+               dividerColor: Constants.Colors.carnation,
+               startColor: Constants.Colors.carnation.opacity(0.2),
+               endColor: Constants.Colors.bluewood
+            )
+
+            OverviewCardView(
+               title: Constants.LocalisedString.totalTime,
+               value: "22h 11m",
+               dividerColor: Constants.Colors.carnation,
+               startColor: Constants.Colors.carnation.opacity(0.2),
+               endColor: Constants.Colors.bluewood
+            )
+         }
+         .padding(EdgeInsets(top: 15, leading: 23, bottom: 10, trailing: 23))
 
          Spacer()
       }
-      .background(Constants.Colors.woodBlue)
+      .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
    }
@@ -101,6 +134,8 @@ struct StatisticsView: View {
 
 struct StatisticsView_Previews: PreviewProvider {
    static var previews: some View {
-      StatisticsView()
+      ForEach(ColorScheme.allCases, id: \.self) {
+         StatisticsView().preferredColorScheme($0)
+      }
    }
 }

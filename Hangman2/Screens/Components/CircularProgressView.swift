@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircularProgressView: View {
-   var progress: Double
+   let progress: Double
 
    var body: some View {
       let lineWidth = CGFloat(12)
@@ -16,15 +16,15 @@ struct CircularProgressView: View {
 
       ZStack {
          Circle()
-            .stroke(Constants.Colors.winRate, lineWidth: lineWidth)
+            .stroke(Constants.Colors.azulPetroleo, lineWidth: lineWidth)
          Circle()
             .trim(from: 0, to: CGFloat(self.progress))
             .stroke(Constants.Colors.mintLeaf, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
             .rotationEffect(Angle(degrees: -90))
             .overlay(
                Text(progressText)
-                  .font(Constants.Fonts.patrickHandXXXL)
-                  .foregroundColor(Constants.Colors.textColor)
+                  .font(Constants.Fonts.patrickHandXL)
+                  .foregroundColor(Constants.Colors.galeForce)
             )
       }
    }

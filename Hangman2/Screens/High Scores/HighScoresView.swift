@@ -8,73 +8,65 @@
 import SwiftUI
 
 struct HighScoresView: View {
-   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-   
+   @Environment(\.dismiss) var dismiss
+
+   // MARK: - BODY
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.highScores) {
-            self.presentationMode.wrappedValue.dismiss()
+            dismiss()
          }
 
+         // MARK: - High Scores
+
+         #warning("Value vrijednosti su hardkodirane!")
          Section {
             ForEach((1...5).reversed(), id: \.self) { _ in
                HStack {
-                  VStack {
-                     Text("DATE")
-                        .font(Font.custom("PatrickHand-Regular", size: 14))
-                     Text("01.01.22")
-                        .font(Font.custom("PatrickHand-Regular", size: 20))
-                  }
+                  ScoreColumnView(title: Constants.LocalisedString.date, value: "01.01.22")
                   Spacer()
-                  VStack {
-                     Text("SCORE")
-                        .font(Font.custom("PatrickHand-Regular", size: 14))
-                     Text("3500")
-                        .font(Font.custom("PatrickHand-Regular", size: 20))
-                  }
+                  ScoreColumnView(title: Constants.LocalisedString.score, value: "3500")
                   Spacer()
-                  VStack {
-                     Text("RATIO")
-                        .font(Font.custom("PatrickHand-Regular", size: 14))
-                     Text("15/05")
-                        .font(Font.custom("PatrickHand-Regular", size: 20))
-                  }
+                  ScoreColumnView(title: Constants.LocalisedString.ratio, value: "15/05")
                   Spacer()
-                  VStack {
-                     Text("DIFFICULTY")
-                        .font(Font.custom("PatrickHand-Regular", size: 14))
-                     Text("Easy")
-                        .font(Font.custom("PatrickHand-Regular", size: 20))
-                  }
+                  ScoreColumnView(title: Constants.LocalisedString.difficulty, value: "Easy")
                   Spacer()
-                  VStack {
-                     Text("TIME TAKEN")
-                        .font(Font.custom("PatrickHand-Regular", size: 14))
-                     Text("23m 41s")
-                        .font(Font.custom("PatrickHand-Regular", size: 20))
-                  }
+                  ScoreColumnView(title: Constants.LocalisedString.time, value: "23m 41s")
                }
-               .padding([.leading, .trailing], 25)
+               .padding([.leading, .trailing], 20)
                .padding([.top, .bottom], 5)
-               .background(Constants.Colors.seeDeepBlue)
+               .background(Constants.Colors.seaDeep)
             }
          } header: {
-            SectionHeaderView(name: Constants.LocalisedString.topFiveScores)
-               .padding(SettingsConst.sectionPadding)
+            SectionHeaderView(name: Constants.LocalisedString.topFiveScores, withInfo: true) {
+               print("high score info")
+            }
+            .padding(.top, 20)
+            .padding(.bottom, 10)
          }
 
+         //  MARK: - Statistics
+
          NavigationLink(destination: StatisticsView()) {
-            TextButton(text: Constants.LocalisedString.statistics, font: Constants.Fonts.dangerL, color: Constants.Colors.carnationRed, textColor: .white) //{}
+            TextButton(
+               text: Constants.LocalisedString.statistics,
+               font: Constants.Fonts.patrickHandL,
+               color: Constants.Colors.carnation,
+               textColor: .white
+            )
          }
          .padding(25)
 
          Spacer()
       }
-      .background(Constants.Colors.woodBlue)
+      .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
    }
 }
+
+// MARK: - PREVIEW
 
 struct HighScoresView_Previews: PreviewProvider {
    static var previews: some View {

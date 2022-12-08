@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct LanguageView: View {
-   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+   @Environment(\.dismiss) var dismiss
 
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.wordsLanguage) {
-            self.presentationMode.wrappedValue.dismiss()
+            dismiss()
          }
 
          Section {
-            CheckgRowView(title: Constants.WordsLanguage.english.localised, isSelected: isSelected(lang: Constants.LocalisedString.english)) {
+            CheckRowView(
+               title: Constants.WordsLanguage.english.localised,
+               isSelected: isSelected(lang: Constants.LocalisedString.english)
+            ) {
                changeWordsLanguage(to: Constants.WordsLanguage.english)
             }
 
-            CheckgRowView(title: Constants.WordsLanguage.croatian.localised, isSelected: isSelected(lang: Constants.LocalisedString.croatian)) {
+            CheckRowView(
+               title: Constants.WordsLanguage.croatian.localised,
+               isSelected: isSelected(lang: Constants.LocalisedString.croatian)
+            ) {
                changeWordsLanguage(to: Constants.WordsLanguage.croatian)
             }
          } header: {
@@ -30,7 +36,7 @@ struct LanguageView: View {
 
          Spacer()
       }
-      .background(Constants.Colors.woodBlue)
+      .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
    }

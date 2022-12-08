@@ -8,6 +8,9 @@
 import Foundation
 
 enum GlobalSettings {
+   @UserDefault(key: "showHint", defaultValue: false)
+   static var showHint: Bool
+
    @UserDefault(key: "gameDifficulty", defaultValue: Constants.GameDifficulty.medium)
    static var gameDifficulty: Difficulty
 

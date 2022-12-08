@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct SegmentedProgressView: View {
-   var progress: Double
-   var length: Int
-   var startColor: Color
-   var endColor: Color
-   var spaceColor: Color
-   var backgroundColor: Color
-   var height = CGFloat(10)
+   let progress: Double
+   let length: Int
+   let startColor: Color
+   let endColor: Color
+   let spaceColor: Color
+   let backgroundColor: Color
+   let height = CGFloat(10)
 
    @ViewBuilder
    var dividerLine: some View {
       Rectangle()
-         .fill(spaceColor.opacity(2))
-         .frame(width: 4, height: self.height)
+         .fill(spaceColor)
+         .frame(width: 2, height: self.height)
    }
 
    var body: some View {
       GeometryReader { geo in
-         ZStack() {
+         ZStack {
             Capsule()
                .fill(backgroundColor)
                .frame(height: self.height)
@@ -34,7 +34,7 @@ struct SegmentedProgressView: View {
                .fill(
                   LinearGradient(
                      gradient: Gradient(
-                        stops: [.init(color: startColor, location: 0.33), .init(color: endColor, location: 0.66)]
+                        stops: [.init(color: startColor, location: 0.30), .init(color: endColor, location: 0.60)]
                      ),
                      startPoint: .leading,
                      endPoint: .trailing
@@ -66,12 +66,12 @@ struct ContentView_Previews: PreviewProvider {
       SegmentedProgressView(
          progress: 100,
          length: 6,
-         startColor: Constants.Colors.carnationRed,
+         startColor: Constants.Colors.carnation,
          endColor: Constants.Colors.mintLeaf,
-         spaceColor: Constants.Colors.seeDeepBlue,
-         backgroundColor: Constants.Colors.toggleBackground
+         spaceColor: Constants.Colors.seaDeep,
+         backgroundColor: Constants.Colors.azulPetroleo
       )
       .padding()
-      .background(Constants.Colors.seeDeepBlue)
+      .background(Constants.Colors.seaDeep)
    }
 }

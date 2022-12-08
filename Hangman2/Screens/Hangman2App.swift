@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Hangman2App: App {
    @ObservedObject var appSettings = AppSettings.shared
-   
+
    var body: some Scene {
       WindowGroup {
          StartView()

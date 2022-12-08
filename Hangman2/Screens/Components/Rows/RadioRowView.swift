@@ -9,7 +9,7 @@ import SwiftUI
 
 #warning("Ne koristim...")
 struct RadioRowView: View {
-   var name: String
+   let name: String
 
    @State var isBindValue: Bool
 
@@ -17,14 +17,14 @@ struct RadioRowView: View {
       HStack {
          Text(LocalizedStringKey(name))
             .frame(maxWidth: .infinity, alignment: .leading)
-            .font(Constants.Fonts.patrickHand)
-            .foregroundColor(Constants.Colors.textColor)
+            .font(Constants.Fonts.patrickHandS)
+            .foregroundColor(Constants.Colors.galeForce)
          Spacer()
          ZStack {
             Circle()
                .strokeBorder(Constants.Colors.sanJuan, lineWidth: 3.5)
                .frame(width: 30, height: 30)
-            ZStack{
+            ZStack {
                Circle()
                   .frame(width: 15, height: 15)
                   .foregroundColor(isBindValue ? Constants.Colors.sanJuan : .clear)
@@ -40,11 +40,11 @@ struct RadioRowView: View {
 }
 
 struct RadioRowView_Previews: PreviewProvider {
-    static var previews: some View {
-       VStack {
-          RadioRowView(name: "test", isBindValue: true)
-          RadioRowView(name: "test", isBindValue: false)
-       }
-       .background(Constants.Colors.woodBlue)
-    }
+   static var previews: some View {
+      VStack {
+         RadioRowView(name: "test", isBindValue: true)
+         RadioRowView(name: "test", isBindValue: false)
+      }
+      .background(Constants.Colors.bluewood)
+   }
 }
