@@ -10,6 +10,8 @@ import SwiftUI
 struct WordsListView: View {
    @Environment(\.dismiss) var dismiss
 
+   @State var presentPopup = false
+
    #warning("Hard-coded")
    let wordsListExample = ["apple", "dog", "cat", "air", "debug"]
 
@@ -20,7 +22,7 @@ struct WordsListView: View {
          }
 
          SectionHeaderView(name: "\(GlobalSettings.wordsLanguage.localised)_WORDS", withInfo: true) {
-            print("List of all words popup")
+            presentPopup.toggle()
          }
 
          ScrollView {
@@ -48,6 +50,13 @@ struct WordsListView: View {
       .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
+      .blur(radius: presentPopup ? 3 : 0)
+      .disabled(presentPopup)
+      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+         AllWordsPopupView {
+            presentPopup.toggle()
+         }
+      }
    }
 }
 

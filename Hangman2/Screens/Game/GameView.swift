@@ -120,7 +120,7 @@ struct GameView: View {
             .blur(radius: presentPopup ? 3 : 0)
             .disabled(presentPopup)
             .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
-               ScoringSystemView {
+               ScoringSystemPopupView {
                   presentPopup.toggle()
                }
             }

@@ -47,7 +47,7 @@ struct SettingsView: View {
 
                NavigationLink(destination: DifficultyView()) {
                   DisclosureRowView(
-                     title: Constants.LocalisedString.difficultyLevel,
+                     title: Constants.LocalisedString.difficultyLevels,
                      trailingText: LocalizedStringKey(GlobalSettings.gameDifficulty.localised)
                   )
                }

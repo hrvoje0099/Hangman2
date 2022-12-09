@@ -10,13 +10,15 @@ import SwiftUI
 struct DifficultyView: View {
    @Environment(\.dismiss) var dismiss
 
+   @State var presentPopup = false
+
    @State private var isEasy = false
    @State private var isMedium = true
    @State private var isHard = false
 
    var body: some View {
       VStack {
-         CustomNavigationView(title: Constants.LocalisedString.difficultyLevel) {
+         CustomNavigationView(title: Constants.LocalisedString.difficultyLevels) {
             dismiss()
          }
 
@@ -43,7 +45,7 @@ struct DifficultyView: View {
             }
          } header: {
             SectionHeaderView(name: Constants.LocalisedString.selectGameDifficultyLvl, withInfo: true) {
-               print("Difficulty info popup")
+               presentPopup.toggle()
             }
          }
 
@@ -52,6 +54,13 @@ struct DifficultyView: View {
       .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
+      .blur(radius: presentPopup ? 3 : 0)
+      .disabled(presentPopup)
+      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+         DifficultyLevelsPopupView {
+            presentPopup.toggle()
+         }
+      }
    }
 
    // MARK: - Helper Methods
@@ -68,5 +77,15 @@ struct DifficultyView: View {
 struct DifficultyView_Previews: PreviewProvider {
    static var previews: some View {
       DifficultyView()
+         .environment(\.locale, .init(identifier: "hr"))
+         .preferredColorScheme(.dark)
+         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+         .previewDisplayName("iPhone 14 Pro")
+
+      DifficultyView()
+         .environment(\.locale, .init(identifier: "en"))
+         .preferredColorScheme(.light)
+         .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
+         .previewDisplayName("iPhone 13 mini")
    }
 }

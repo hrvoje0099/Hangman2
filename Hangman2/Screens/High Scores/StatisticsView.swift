@@ -10,6 +10,8 @@ import SwiftUI
 struct StatisticsView: View {
    @Environment(\.dismiss) var dismiss
 
+   @State var presentPopup = false
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.statistics) {
@@ -19,7 +21,7 @@ struct StatisticsView: View {
          // MARK: - Win Rate
 
          SectionHeaderView(name: Constants.LocalisedString.winRate, withInfo: true) {
-            print("win rate info")
+            presentPopup.toggle()
          }
 
          #warning("Rate value i progress su hardkodirane vrijednosti!")
@@ -129,6 +131,13 @@ struct StatisticsView: View {
       .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
+      .blur(radius: presentPopup ? 3 : 0)
+      .disabled(presentPopup)
+      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+         WinRatePopupView {
+            presentPopup.toggle()
+         }
+      }
    }
 }
 

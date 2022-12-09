@@ -30,14 +30,19 @@
 		BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */; };
 		BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B4293B534700E0319F /* OverviewCardView.swift */; };
 		BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B7293B8D2C00E0319F /* GameView.swift */; };
+		BB7DEA76294329480035F6C8 /* WinRatePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */; };
+		BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */; };
+		BB7DEA7A29436C520035F6C8 /* LanguagePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */; };
 		BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA85E2934E0560009B6BB /* Difficulty.swift */; };
 		BB9DA8612934E9CA0009B6BB /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */; };
 		BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2A9C1292CE15900388189 /* TextButton.swift */; };
 		BBCE96F1292E69D300A9535D /* WordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE96F0292E69D300A9535D /* WordsListView.swift */; };
 		BBDE41232940C0340052D13D /* CroatianKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */; };
 		BBDE41252940C4410052D13D /* EnglishKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41242940C4410052D13D /* EnglishKeyboardView.swift */; };
-		BBDE41292941311C0052D13D /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41282941311C0052D13D /* PopupView.swift */; };
-		BBDE4144294228EE0052D13D /* ScoringSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4143294228EE0052D13D /* ScoringSystemView.swift */; };
+		BBDE41292941311C0052D13D /* PopupViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41282941311C0052D13D /* PopupViewModifier.swift */; };
+		BBDE4144294228EE0052D13D /* ScoringSystemPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */; };
+		BBDE4146294286E50052D13D /* HighScoresPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4145294286E50052D13D /* HighScoresPopupView.swift */; };
+		BBDE4148294298DA0052D13D /* AllWordsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */; };
 		EE3623022913E4980088943C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3623012913E4980088943C /* Preview Assets.xcassets */; };
 		EE96E5422913BC20000EBC08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96E5412913BC20000EBC08 /* Constants.swift */; };
 		EE96E5452913DB09000EBC08 /* Another Danger - Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE96E5442913DB08000EBC08 /* Another Danger - Demo.otf */; };
@@ -71,14 +76,19 @@
 		BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyRateView.swift; sourceTree = "<group>"; };
 		BB78D9B4293B534700E0319F /* OverviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardView.swift; sourceTree = "<group>"; };
 		BB78D9B7293B8D2C00E0319F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinRatePopupView.swift; sourceTree = "<group>"; };
+		BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelsPopupView.swift; sourceTree = "<group>"; };
+		BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopupView.swift; sourceTree = "<group>"; };
 		BB9DA85E2934E0560009B6BB /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		BBC2A9C1292CE15900388189 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		BBCE96F0292E69D300A9535D /* WordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListView.swift; sourceTree = "<group>"; };
 		BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroatianKeyboardView.swift; sourceTree = "<group>"; };
 		BBDE41242940C4410052D13D /* EnglishKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishKeyboardView.swift; sourceTree = "<group>"; };
-		BBDE41282941311C0052D13D /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		BBDE4143294228EE0052D13D /* ScoringSystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringSystemView.swift; sourceTree = "<group>"; };
+		BBDE41282941311C0052D13D /* PopupViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModifier.swift; sourceTree = "<group>"; };
+		BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringSystemPopupView.swift; sourceTree = "<group>"; };
+		BBDE4145294286E50052D13D /* HighScoresPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresPopupView.swift; sourceTree = "<group>"; };
+		BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWordsPopupView.swift; sourceTree = "<group>"; };
 		EE3623012913E4980088943C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE96E5412913BC20000EBC08 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE96E5442913DB08000EBC08 /* Another Danger - Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Another Danger - Demo.otf"; sourceTree = "<group>"; };
@@ -161,13 +171,13 @@
 				BB5D42712935051C0077C9E5 /* CircularProgressView.swift */,
 				BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */,
 				BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */,
+				BB78D9B4293B534700E0319F /* OverviewCardView.swift */,
+				BBDE41282941311C0052D13D /* PopupViewModifier.swift */,
 				BB78D9B0293AB12600E0319F /* ScoreColumnView.swift */,
 				BB5ACC65292D243E00755A61 /* SectionHeaderView.swift */,
 				BB5D427329354C4D0077C9E5 /* SegmentedProgressView.swift */,
 				BB5CF474293181BD00814D34 /* ShapeButton.swift */,
 				BBC2A9C1292CE15900388189 /* TextButton.swift */,
-				BB78D9B4293B534700E0319F /* OverviewCardView.swift */,
-				BBDE41282941311C0052D13D /* PopupView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -175,11 +185,11 @@
 		BBDBBA25292CFFA100BB3B8C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BB71DC75291C62A3007B045D /* SettingsView.swift */,
+				BB2963222930FB93008D1154 /* AboutView.swift */,
 				BB71DC77291D49C8007B045D /* DifficultyView.swift */,
 				BB5ACC69292D70F700755A61 /* LanguageView.swift */,
+				BB71DC75291C62A3007B045D /* SettingsView.swift */,
 				BBCE96F0292E69D300A9535D /* WordsListView.swift */,
-				BB2963222930FB93008D1154 /* AboutView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -196,7 +206,12 @@
 		BBDE4142294228D80052D13D /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				BBDE4143294228EE0052D13D /* ScoringSystemView.swift */,
+				BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */,
+				BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */,
+				BBDE4145294286E50052D13D /* HighScoresPopupView.swift */,
+				BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */,
+				BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */,
+				BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -387,12 +402,13 @@
 			files = (
 				BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */,
 				BB71DC78291D49C8007B045D /* DifficultyView.swift in Sources */,
-				BBDE41292941311C0052D13D /* PopupView.swift in Sources */,
+				BBDE41292941311C0052D13D /* PopupViewModifier.swift in Sources */,
 				BB9DA8612934E9CA0009B6BB /* StatisticsView.swift in Sources */,
 				BB2963232930FB93008D1154 /* AboutView.swift in Sources */,
 				BB5ACC66292D243E00755A61 /* SectionHeaderView.swift in Sources */,
+				BB7DEA7A29436C520035F6C8 /* LanguagePopupView.swift in Sources */,
 				BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */,
-				BBDE4144294228EE0052D13D /* ScoringSystemView.swift in Sources */,
+				BBDE4144294228EE0052D13D /* ScoringSystemPopupView.swift in Sources */,
 				BB5ACC64292D235D00755A61 /* DisclosureRowView.swift in Sources */,
 				BBDE41252940C4410052D13D /* EnglishKeyboardView.swift in Sources */,
 				BB5D427429354C4D0077C9E5 /* SegmentedProgressView.swift in Sources */,
@@ -402,19 +418,23 @@
 				BB5D42722935051C0077C9E5 /* CircularProgressView.swift in Sources */,
 				BB5ACC6A292D70F700755A61 /* LanguageView.swift in Sources */,
 				BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */,
+				BB7DEA76294329480035F6C8 /* WinRatePopupView.swift in Sources */,
 				BB5ACC55292D05FD00755A61 /* GlobalSettings.swift in Sources */,
 				BB71DC76291C62A3007B045D /* SettingsView.swift in Sources */,
 				EEA09D662913B30E00FAFF53 /* StartView.swift in Sources */,
 				EEA09D642913B30E00FAFF53 /* Hangman2App.swift in Sources */,
 				BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */,
+				BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */,
 				BB5ACC53292D05E300755A61 /* Language.swift in Sources */,
 				BB5ACC5F292D1BB900755A61 /* CustomNavigationView.swift in Sources */,
 				EE96E5422913BC20000EBC08 /* Constants.swift in Sources */,
 				BB5CF47A2932702B00814D34 /* HighScoresView.swift in Sources */,
+				BBDE4146294286E50052D13D /* HighScoresPopupView.swift in Sources */,
 				BB78D9B1293AB12600E0319F /* ScoreColumnView.swift in Sources */,
 				BB5ACC61292D20FB00755A61 /* ToggleRowView.swift in Sources */,
 				BB5ACC6C292D7C7800755A61 /* CheckRowView.swift in Sources */,
 				BB5CF4772932559E00814D34 /* AppSettings.swift in Sources */,
+				BBDE4148294298DA0052D13D /* AllWordsPopupView.swift in Sources */,
 				BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */,
 				BB5ACC68292D257500755A61 /* RadioRowView.swift in Sources */,
 			);

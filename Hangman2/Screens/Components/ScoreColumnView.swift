@@ -10,7 +10,7 @@ import SwiftUI
 struct ScoreColumnView: View {
    let title: String
    let value: String
-   
+
    var body: some View {
       VStack {
          Text(LocalizedStringKey(title))

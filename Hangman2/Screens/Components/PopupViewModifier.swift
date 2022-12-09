@@ -1,5 +1,5 @@
 //
-// SwiftUIView2
+// PopupViewModifier
 // Hangman2
 //
 // Created by Hrvoje

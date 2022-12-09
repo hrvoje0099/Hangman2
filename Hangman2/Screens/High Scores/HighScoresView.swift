@@ -10,6 +10,8 @@ import SwiftUI
 struct HighScoresView: View {
    @Environment(\.dismiss) var dismiss
 
+   @State var presentPopup = false
+
    // MARK: - BODY
 
    var body: some View {
@@ -40,13 +42,13 @@ struct HighScoresView: View {
             }
          } header: {
             SectionHeaderView(name: Constants.LocalisedString.topFiveScores, withInfo: true) {
-               print("high score info")
+               presentPopup.toggle()
             }
             .padding(.top, 20)
             .padding(.bottom, 10)
          }
 
-         //  MARK: - Statistics
+         // MARK: - Statistics
 
          NavigationLink(destination: StatisticsView()) {
             TextButton(
@@ -63,6 +65,13 @@ struct HighScoresView: View {
       .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
+      .blur(radius: presentPopup ? 3 : 0)
+      .disabled(presentPopup)
+      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+         HighScoresPopupView {
+            presentPopup.toggle()
+         }
+      }
    }
 }
 
