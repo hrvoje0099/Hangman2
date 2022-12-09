@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-enum SettingsConst {
-}
-
 struct SettingsView: View {
    @Environment(\.dismiss) var dismiss
 
    @State private var isShowHint = false
+   @State private var presentLanguagePopup = false
 
    private let sectionPadding = EdgeInsets(top: 20, leading: 0, bottom: 10, trailing: 0)
 
@@ -59,12 +57,14 @@ struct SettingsView: View {
             // MARK: - Language
 
             Section {
-               DisclosureRowView(title: Constants.LocalisedString.application, trailingText: getApplicationLanguage())
-                  .onTapGesture {
-                     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-                  }
+               NavigationLink(destination: AppLanguageView()) {
+                  DisclosureRowView(
+                     title: Constants.LocalisedString.application,
+                     trailingText: LocalizedStringKey(AppSettings.shared.currentLang.localised)
+                  )
+               }
 
-               NavigationLink(destination: LanguageView()) {
+               NavigationLink(destination: WordsLanguageView()) {
                   DisclosureRowView(
                      title: Constants.LocalisedString.words,
                      trailingText: LocalizedStringKey(GlobalSettings.wordsLanguage.localised)
@@ -72,7 +72,7 @@ struct SettingsView: View {
                }
             } header: {
                SectionHeaderView(name: Constants.LocalisedString.language, withInfo: true) {
-                  print("Language info")
+                  presentLanguagePopup.toggle()
                }
                .padding(sectionPadding)
             }
@@ -97,22 +97,13 @@ struct SettingsView: View {
       .background(Constants.Colors.bluewood)
       .scrollContentBackground(.hidden)
       .navigationBarBackButtonHidden()
-   }
-
-   // MARK: - Helper methods
-
-   private func getApplicationLanguage() -> LocalizedStringKey {
-      let localIdentifier = Locale.current.language.languageCode?.identifier
-
-      if let localIdentifier {
-         switch localIdentifier {
-         case Constants.WordsLanguage.croatian.location:
-            return LocalizedStringKey(Constants.WordsLanguage.croatian.localised)
-         default:
-            return LocalizedStringKey(Constants.WordsLanguage.english.localised)
+      .blur(radius: presentLanguagePopup ? 3 : 0)
+      .disabled(presentLanguagePopup)
+      .popup(isPresented: presentLanguagePopup, alignment: .center, direction: .top) {
+         LanguagePopupView {
+            presentLanguagePopup.toggle()
          }
       }
-      return ""
    }
 }
 

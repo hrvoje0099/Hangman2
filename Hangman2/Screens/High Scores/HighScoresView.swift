@@ -10,7 +10,7 @@ import SwiftUI
 struct HighScoresView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentPopup = false
+   @State private var presentPopup = false
 
    // MARK: - BODY
 

@@ -1,5 +1,7 @@
 "ABOUT"                          = "Opis";
+"APP_LANGUAGE"                   = "Jezik aplikacije";
 "APPLICATION"                    = "Aplikacija";
+"CHOOSE_APP_LANGUAGE"            = "Odaberite jezik aplikacije";
 "CHOOSE_DIFFICULTY"              = "Ovisno koju razinu odaberete, mijenja se i duljina riječi koja vam se može pojaviti u igri.";
 "CHOOSE_WORDS_LANGUAGE"          = "Odaberite jezik riječi";
 "COMBINE_DIFFICULTY_LEVELS"      = "Možete kombinirati razine težina. Možete odabrati jednu razinu, dvije ili čak sve tri.";
@@ -34,6 +36,7 @@
 "HITS"                           = "Pogodci";
 "INFO"                           = "Info";
 "LANGUAGE"                       = "Jezik";
+"LANGUAGE_INFO"                  = "Možete zasebno odabrati jezik aplikacije i jezik riječi koje će se pojavljivati u igri.";
 "LIST_OF_ALL_WORDS"              = "Popis svih riječi";
 "LIST_OF_ALL_WORDS_INFO"         = "Ovisno koji ste \"Jezik riječi\" odabrali, taj će se popis svih riječi prikazati.";
 "LONGEST_GAME"                   = "Najduža igra";

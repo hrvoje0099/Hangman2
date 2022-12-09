@@ -14,7 +14,7 @@ enum GlobalSettings {
    @UserDefault(key: "gameDifficulty", defaultValue: Constants.GameDifficulty.medium)
    static var gameDifficulty: Difficulty
 
-   @UserDefault(key: "wordsLanguage", defaultValue: Constants.WordsLanguage.english)
+   @UserDefault(key: "wordsLanguage", defaultValue: Language.english)
    static var wordsLanguage: Language
 }
 

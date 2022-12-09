@@ -10,7 +10,7 @@ import SwiftUI
 struct DifficultyView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentPopup = false
+   @State private var presentPopup = false
 
    @State private var isEasy = false
    @State private var isMedium = true

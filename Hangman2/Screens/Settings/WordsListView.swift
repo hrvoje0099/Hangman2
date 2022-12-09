@@ -10,7 +10,7 @@ import SwiftUI
 struct WordsListView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentPopup = false
+   @State private var presentPopup = false
 
    #warning("Hard-coded")
    let wordsListExample = ["apple", "dog", "cat", "air", "debug"]

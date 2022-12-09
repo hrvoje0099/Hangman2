@@ -15,6 +15,7 @@ struct Hangman2App: App {
       WindowGroup {
          StartView()
             .preferredColorScheme(appSettings.currentTheme.colorScheme)
+            .environment(\.locale, .init(identifier: appSettings.currentLang.location))
       }
    }
 }

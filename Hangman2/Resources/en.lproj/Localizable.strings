@@ -1,5 +1,7 @@
 "ABOUT"                          = "About";
+"APP_LANGUAGE"                   = "App Language";
 "APPLICATION"                    = "Application";
+"CHOOSE_APP_LANGUAGE"            = "Choose app language";
 "CHOOSE_DIFFICULTY"              = "Depending on which level you choose, the length of words that can appear in the game also changes.";
 "CHOOSE_WORDS_LANGUAGE"          = "Choose words language";
 "COMBINE_DIFFICULTY_LEVELS"      = "You can combine difficulty levels. You can choose one level, two or even all three.";
@@ -34,6 +36,7 @@
 "HITS"                           = "Hits";
 "INFO"                           = "Info";
 "LANGUAGE"                       = "Language";
+"LANGUAGE_INFO"                  = "You can separately choose the language of the application and the language of the words that will appear in the game.";
 "LIST_OF_ALL_WORDS"              = "List of all words";
 "LIST_OF_ALL_WORDS_INFO"         = "Depending on which \"Words language\" you have chosen, that list of all words will be displayed.";
 "LONGEST_GAME"                   = "Longest Game";

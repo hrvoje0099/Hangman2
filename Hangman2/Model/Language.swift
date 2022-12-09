@@ -7,7 +7,25 @@
 
 import Foundation
 
-struct Language: Codable {
-   let location: String
-   let localised: String
+enum Language: Int, Codable {
+   case english
+   case croatian
+
+   var location: String {
+      switch self {
+      case .english:
+         return "en"
+      case .croatian:
+         return "hr"
+      }
+   }
+
+   var localised: String {
+      switch self {
+      case .english:
+         return Constants.LocalisedString.english
+      case .croatian:
+         return Constants.LocalisedString.croatian
+      }
+   }
 }

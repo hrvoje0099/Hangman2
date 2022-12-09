@@ -86,10 +86,22 @@ enum Constants {
       static let timer                       = "timer"
    }
 
+   enum LanguageApp {
+      static let english            = Language.english
+      static let croatian           = Language.croatian
+   }
+
+   enum LanguageWords {
+      static let croatian           = Language.croatian
+      static let english            = Language.english
+   }
+
    // swiftlint:disable: identifier_name
    enum LocalisedString {
       static let about                       = "ABOUT"
+      static let appLanguage                 = "APP_LANGUAGE"
       static let application                 = "APPLICATION"
+      static let chooseAppLanguage           = "CHOOSE_APP_LANGUAGE"
       static let chooseDifficulty            = "CHOOSE_DIFFICULTY"
       static let chooseWordsLanguage         = "CHOOSE_WORDS_LANGUAGE"
       static let combineDifficultyLevels     = "COMBINE_DIFFICULTY_LEVELS";      #warning("ne koristim")
@@ -122,6 +134,7 @@ enum Constants {
       static let hits                        = "HITS"
       static let info                        = "INFO"
       static let language                    = "LANGUAGE"
+      static let languageInfo                = "LANGUAGE_INFO"
       static let listOfAllWords              = "LIST_OF_ALL_WORDS"
       static let listOfAllWordsInfo          = "LIST_OF_ALL_WORDS_INFO"
       static let longestGame                 = "LONGEST_GAME"
@@ -164,10 +177,5 @@ enum Constants {
       static let appName                     = "Guessable - Hangman"
       static let gitHub                      = "GitHub"
       static let linkedIn                    = "LinkedIn"
-   }
-
-   enum WordsLanguage {
-      static let croatian           = Language(location: "hr", localised: LocalisedString.croatian)
-      static let english            = Language(location: "en", localised: LocalisedString.english)
    }
 }

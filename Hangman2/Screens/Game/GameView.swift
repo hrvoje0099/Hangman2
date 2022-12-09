@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentPopup = false
+   @State private var presentPopup = false
 
    var body: some View {
       ZStack {
@@ -134,11 +134,11 @@ struct GameView: View {
       let wordsLanguage = GlobalSettings.wordsLanguage.localised
 
       switch wordsLanguage {
-      case Constants.WordsLanguage.croatian.localised:
+      case Constants.LanguageWords.croatian.localised:
          return AnyView(CroatianKeyboardView(geometry: geometry) { char in
             completion(char)
          })
-      case Constants.WordsLanguage.english.localised:
+      case Constants.LanguageWords.english.localised:
          return AnyView(EnglishKeyboardView(geometry: geometry) { char in
             completion(char)
          })

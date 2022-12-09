@@ -1,5 +1,5 @@
 //
-// LanguageView
+// AppLanguageView
 // Hangman2
 //
 // Created by Hrvoje
@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct LanguageView: View {
+struct AppLanguageView: View {
    @Environment(\.dismiss) var dismiss
 
    var body: some View {
       VStack {
-         CustomNavigationView(title: Constants.LocalisedString.wordsLanguage) {
+         CustomNavigationView(title: Constants.LocalisedString.appLanguage) {
             dismiss()
          }
 
          Section {
             CheckRowView(
-               title: Constants.WordsLanguage.english.localised,
+               title: Constants.LanguageApp.english.localised,
                isSelected: isSelected(lang: Constants.LocalisedString.english)
             ) {
-               changeWordsLanguage(to: Constants.WordsLanguage.english)
+               changeAppLanguage(to: Constants.LanguageApp.english)
             }
 
             CheckRowView(
-               title: Constants.WordsLanguage.croatian.localised,
+               title: Constants.LanguageApp.croatian.localised,
                isSelected: isSelected(lang: Constants.LocalisedString.croatian)
             ) {
-               changeWordsLanguage(to: Constants.WordsLanguage.croatian)
+               changeAppLanguage(to: Constants.LanguageApp.croatian)
             }
          } header: {
-            SectionHeaderView(name: Constants.LocalisedString.chooseWordsLanguage)
+            SectionHeaderView(name: Constants.LocalisedString.chooseAppLanguage)
          }
 
          Spacer()
@@ -44,16 +44,16 @@ struct LanguageView: View {
    // MARK: - Helper Methods
 
    private func isSelected(lang: String) -> Bool {
-      lang == GlobalSettings.wordsLanguage.localised
+      lang == AppSettings.shared.currentLang.localised
    }
 
-   private func changeWordsLanguage(to wordsLanguage: Language) {
-      GlobalSettings.wordsLanguage = wordsLanguage
+   private func changeAppLanguage(to appLanguage: Language) {
+      AppSettings.shared.currentLang = appLanguage
    }
 }
 
-struct LanguageView_Previews: PreviewProvider {
+struct AppLanguageView_Previews: PreviewProvider {
    static var previews: some View {
-      LanguageView()
+      AppLanguageView()
    }
 }

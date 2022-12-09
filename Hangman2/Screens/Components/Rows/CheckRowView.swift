@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckRowView: View {
-   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+   @Environment(\.dismiss) var dismiss
 
    let title: String
    @State var isSelected: Bool
@@ -31,7 +31,7 @@ struct CheckRowView: View {
       .contentShape(Rectangle())
       .onTapGesture {
          action()
-         self.presentationMode.wrappedValue.dismiss()
+         self.dismiss()
       }
    }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct StatisticsView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentPopup = false
+   @State private var presentPopup = false
 
    var body: some View {
       VStack {
