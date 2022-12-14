@@ -5,7 +5,7 @@
 // Created by Hrvoje
 //
 
-import Foundation
+import SwiftUI
 
 enum Language: Int, Codable {
    case english
@@ -20,7 +20,7 @@ enum Language: Int, Codable {
       }
    }
 
-   var localised: String {
+   var localised: LocalizedStringKey {
       switch self {
       case .english:
          return Constants.LocalisedString.english

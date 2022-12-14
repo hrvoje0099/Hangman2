@@ -10,12 +10,6 @@ import Foundation
 enum GlobalSettings {
    @UserDefault(key: "showHint", defaultValue: false)
    static var showHint: Bool
-
-   @UserDefault(key: "gameDifficulty", defaultValue: Constants.GameDifficulty.medium)
-   static var gameDifficulty: Difficulty
-
-   @UserDefault(key: "wordsLanguage", defaultValue: Language.english)
-   static var wordsLanguage: Language
 }
 
 @propertyWrapper

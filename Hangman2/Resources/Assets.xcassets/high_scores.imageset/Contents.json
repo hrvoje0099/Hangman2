@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Settings.pdf",
+      "filename" : "high_scores_light.pdf",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "high_scores.png",
+      "filename" : "high_scores_dark.pdf",
       "idiom" : "universal"
     }
   ],

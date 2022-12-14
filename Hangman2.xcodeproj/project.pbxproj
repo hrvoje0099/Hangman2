@@ -10,13 +10,16 @@
 		BB2963232930FB93008D1154 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2963222930FB93008D1154 /* AboutView.swift */; };
 		BB29632529311E46008D1154 /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB29632429311E46008D1154 /* PatrickHand-Regular.ttf */; };
 		BB343671292EBDDD0012FF81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB343673292EBDDD0012FF81 /* Localizable.strings */; };
+		BB3F540A2946778600337565 /* EmailComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F54092946778600337565 /* EmailComposerView.swift */; };
+		BB3F540C29467D4D00337565 /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F540B29467D4D00337565 /* EmailComposer.swift */; };
+		BB3F542629473C3500337565 /* Bundle+Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F542529473C3500337565 /* Bundle+Informations.swift */; };
+		BB3F5428294765BB00337565 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F5427294765BB00337565 /* BackgroundImageView.swift */; };
 		BB5ACC53292D05E300755A61 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC52292D05E300755A61 /* Language.swift */; };
 		BB5ACC55292D05FD00755A61 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */; };
 		BB5ACC5F292D1BB900755A61 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */; };
 		BB5ACC61292D20FB00755A61 /* ToggleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC60292D20FB00755A61 /* ToggleRowView.swift */; };
 		BB5ACC64292D235D00755A61 /* DisclosureRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC63292D235D00755A61 /* DisclosureRowView.swift */; };
 		BB5ACC66292D243E00755A61 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC65292D243E00755A61 /* SectionHeaderView.swift */; };
-		BB5ACC68292D257500755A61 /* RadioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC67292D257500755A61 /* RadioRowView.swift */; };
 		BB5ACC6A292D70F700755A61 /* WordsLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC69292D70F700755A61 /* WordsLanguageView.swift */; };
 		BB5ACC6C292D7C7800755A61 /* CheckRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC6B292D7C7800755A61 /* CheckRowView.swift */; };
 		BB5CF475293181BD00814D34 /* ShapeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5CF474293181BD00814D34 /* ShapeButton.swift */; };
@@ -24,27 +27,34 @@
 		BB5CF47A2932702B00814D34 /* HighScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5CF4792932702B00814D34 /* HighScoresView.swift */; };
 		BB5D42722935051C0077C9E5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D42712935051C0077C9E5 /* CircularProgressView.swift */; };
 		BB5D427429354C4D0077C9E5 /* SegmentedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D427329354C4D0077C9E5 /* SegmentedProgressView.swift */; };
+		BB6E6B922948CBE900A4DF4D /* BackImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E6B912948CBE900A4DF4D /* BackImageButton.swift */; };
+		BB6E6B942948D3E200A4DF4D /* CharBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E6B932948D3E200A4DF4D /* CharBox.swift */; };
+		BB6E6B962949BA2100A4DF4D /* OverviewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E6B952949BA2100A4DF4D /* OverviewType.swift */; };
+		BB6E6BC02949C47400A4DF4D /* View+PostfixedSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E6BBF2949C47400A4DF4D /* View+PostfixedSpacer.swift */; };
 		BB71DC76291C62A3007B045D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71DC75291C62A3007B045D /* SettingsView.swift */; };
 		BB71DC78291D49C8007B045D /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71DC77291D49C8007B045D /* DifficultyView.swift */; };
 		BB78D9B1293AB12600E0319F /* ScoreColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B0293AB12600E0319F /* ScoreColumnView.swift */; };
 		BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */; };
 		BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B4293B534700E0319F /* OverviewCardView.swift */; };
 		BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B7293B8D2C00E0319F /* GameView.swift */; };
-		BB7DEA76294329480035F6C8 /* WinRatePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */; };
 		BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */; };
-		BB7DEA7A29436C520035F6C8 /* LanguagePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */; };
 		BB7DEA7C2943DD190035F6C8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7B2943DD190035F6C8 /* Theme.swift */; };
 		BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */; };
+		BB7DEA812943F8F60035F6C8 /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA802943F8F60035F6C8 /* InfoPopupView.swift */; };
+		BB7DEA8429448AA90035F6C8 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA8329448AA90035F6C8 /* CapsuleButton.swift */; };
 		BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA85E2934E0560009B6BB /* Difficulty.swift */; };
 		BB9DA8612934E9CA0009B6BB /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */; };
+		BB9ECB982946276C00FF460A /* ScrollViewIfNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */; };
+		BBA5C9882944DDF000369696 /* View+SpecificCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5C9872944DDF000369696 /* View+SpecificCornerRadius.swift */; };
+		BBA5C98A29451F6300369696 /* ConfirmPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5C98929451F6300369696 /* ConfirmPopupView.swift */; };
 		BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2A9C1292CE15900388189 /* TextButton.swift */; };
 		BBCE96F1292E69D300A9535D /* WordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE96F0292E69D300A9535D /* WordsListView.swift */; };
+		BBDA270029489F2000E610D2 /* ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA26FF29489F2000E610D2 /* ConditionalViewModifier.swift */; };
 		BBDE41232940C0340052D13D /* CroatianKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */; };
 		BBDE41252940C4410052D13D /* EnglishKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41242940C4410052D13D /* EnglishKeyboardView.swift */; };
 		BBDE41292941311C0052D13D /* PopupViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41282941311C0052D13D /* PopupViewModifier.swift */; };
 		BBDE4144294228EE0052D13D /* ScoringSystemPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */; };
 		BBDE4146294286E50052D13D /* HighScoresPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4145294286E50052D13D /* HighScoresPopupView.swift */; };
-		BBDE4148294298DA0052D13D /* AllWordsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */; };
 		EE3623022913E4980088943C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3623012913E4980088943C /* Preview Assets.xcassets */; };
 		EE96E5422913BC20000EBC08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96E5412913BC20000EBC08 /* Constants.swift */; };
 		EE96E5452913DB09000EBC08 /* Another Danger - Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE96E5442913DB08000EBC08 /* Another Danger - Demo.otf */; };
@@ -58,13 +68,16 @@
 		BB29632429311E46008D1154 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		BB343672292EBDDD0012FF81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BB343674292EBDE30012FF81 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB3F54092946778600337565 /* EmailComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailComposerView.swift; sourceTree = "<group>"; };
+		BB3F540B29467D4D00337565 /* EmailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
+		BB3F542529473C3500337565 /* Bundle+Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Informations.swift"; sourceTree = "<group>"; };
+		BB3F5427294765BB00337565 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		BB5ACC52292D05E300755A61 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		BB5ACC60292D20FB00755A61 /* ToggleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleRowView.swift; sourceTree = "<group>"; };
 		BB5ACC63292D235D00755A61 /* DisclosureRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureRowView.swift; sourceTree = "<group>"; };
 		BB5ACC65292D243E00755A61 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
-		BB5ACC67292D257500755A61 /* RadioRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRowView.swift; sourceTree = "<group>"; };
 		BB5ACC69292D70F700755A61 /* WordsLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsLanguageView.swift; sourceTree = "<group>"; };
 		BB5ACC6B292D7C7800755A61 /* CheckRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckRowView.swift; sourceTree = "<group>"; };
 		BB5CF474293181BD00814D34 /* ShapeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeButton.swift; sourceTree = "<group>"; };
@@ -72,27 +85,34 @@
 		BB5CF4792932702B00814D34 /* HighScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresView.swift; sourceTree = "<group>"; };
 		BB5D42712935051C0077C9E5 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		BB5D427329354C4D0077C9E5 /* SegmentedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressView.swift; sourceTree = "<group>"; };
+		BB6E6B912948CBE900A4DF4D /* BackImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackImageButton.swift; sourceTree = "<group>"; };
+		BB6E6B932948D3E200A4DF4D /* CharBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharBox.swift; sourceTree = "<group>"; };
+		BB6E6B952949BA2100A4DF4D /* OverviewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewType.swift; sourceTree = "<group>"; };
+		BB6E6BBF2949C47400A4DF4D /* View+PostfixedSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PostfixedSpacer.swift"; sourceTree = "<group>"; };
 		BB71DC75291C62A3007B045D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BB71DC77291D49C8007B045D /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
 		BB78D9B0293AB12600E0319F /* ScoreColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreColumnView.swift; sourceTree = "<group>"; };
 		BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyRateView.swift; sourceTree = "<group>"; };
 		BB78D9B4293B534700E0319F /* OverviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardView.swift; sourceTree = "<group>"; };
 		BB78D9B7293B8D2C00E0319F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinRatePopupView.swift; sourceTree = "<group>"; };
 		BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelsPopupView.swift; sourceTree = "<group>"; };
-		BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopupView.swift; sourceTree = "<group>"; };
 		BB7DEA7B2943DD190035F6C8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageView.swift; sourceTree = "<group>"; };
+		BB7DEA802943F8F60035F6C8 /* InfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
+		BB7DEA8329448AA90035F6C8 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		BB9DA85E2934E0560009B6BB /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewIfNeeded.swift; sourceTree = "<group>"; };
+		BBA5C9872944DDF000369696 /* View+SpecificCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SpecificCornerRadius.swift"; sourceTree = "<group>"; };
+		BBA5C98929451F6300369696 /* ConfirmPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPopupView.swift; sourceTree = "<group>"; };
 		BBC2A9C1292CE15900388189 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		BBCE96F0292E69D300A9535D /* WordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListView.swift; sourceTree = "<group>"; };
+		BBDA26FF29489F2000E610D2 /* ConditionalViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalViewModifier.swift; sourceTree = "<group>"; };
 		BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroatianKeyboardView.swift; sourceTree = "<group>"; };
 		BBDE41242940C4410052D13D /* EnglishKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishKeyboardView.swift; sourceTree = "<group>"; };
 		BBDE41282941311C0052D13D /* PopupViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModifier.swift; sourceTree = "<group>"; };
 		BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringSystemPopupView.swift; sourceTree = "<group>"; };
 		BBDE4145294286E50052D13D /* HighScoresPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresPopupView.swift; sourceTree = "<group>"; };
-		BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWordsPopupView.swift; sourceTree = "<group>"; };
 		EE3623012913E4980088943C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE96E5412913BC20000EBC08 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE96E5442913DB08000EBC08 /* Another Danger - Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Another Danger - Demo.otf"; sourceTree = "<group>"; };
@@ -117,6 +137,9 @@
 		BB5ACC4E292D059000755A61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BB3F542529473C3500337565 /* Bundle+Informations.swift */,
+				BBA5C9872944DDF000369696 /* View+SpecificCornerRadius.swift */,
+				BB6E6BBF2949C47400A4DF4D /* View+PostfixedSpacer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,6 +150,7 @@
 				BB9DA85E2934E0560009B6BB /* Difficulty.swift */,
 				BB5ACC52292D05E300755A61 /* Language.swift */,
 				BB7DEA7B2943DD190035F6C8 /* Theme.swift */,
+				BB6E6B952949BA2100A4DF4D /* OverviewType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,28 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				BB5ACC63292D235D00755A61 /* DisclosureRowView.swift */,
-				BB5ACC67292D257500755A61 /* RadioRowView.swift */,
 				BB5ACC60292D20FB00755A61 /* ToggleRowView.swift */,
 				BB5ACC6B292D7C7800755A61 /* CheckRowView.swift */,
 			);
 			path = Rows;
-			sourceTree = "<group>";
-		};
-		BB5CF4782932700700814D34 /* High Scores */ = {
-			isa = PBXGroup;
-			children = (
-				BB5CF4792932702B00814D34 /* HighScoresView.swift */,
-				BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */,
-			);
-			path = "High Scores";
-			sourceTree = "<group>";
-		};
-		BB78D9B6293B8CE200E0319F /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				BB78D9B7293B8D2C00E0319F /* GameView.swift */,
-			);
-			path = Game;
 			sourceTree = "<group>";
 		};
 		BB7DEA7D2943E01E0035F6C8 /* Language */ = {
@@ -168,40 +174,106 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
-		BBC2A9BF292CDD2300388189 /* Start */ = {
+		BB7DEA8229448A430035F6C8 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				EEA09D652913B30E00FAFF53 /* StartView.swift */,
-			);
-			path = Start;
-			sourceTree = "<group>";
-		};
-		BBC2A9C0292CE12F00388189 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				BBDE4142294228D80052D13D /* Popups */,
-				BBDE41212940C01B0052D13D /* Keybords */,
-				BB5ACC62292D234500755A61 /* Rows */,
-				BB5D42712935051C0077C9E5 /* CircularProgressView.swift */,
-				BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */,
-				BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */,
-				BB78D9B4293B534700E0319F /* OverviewCardView.swift */,
-				BBDE41282941311C0052D13D /* PopupViewModifier.swift */,
-				BB78D9B0293AB12600E0319F /* ScoreColumnView.swift */,
-				BB5ACC65292D243E00755A61 /* SectionHeaderView.swift */,
-				BB5D427329354C4D0077C9E5 /* SegmentedProgressView.swift */,
+				BB6E6B912948CBE900A4DF4D /* BackImageButton.swift */,
+				BB7DEA8329448AA90035F6C8 /* CapsuleButton.swift */,
 				BB5CF474293181BD00814D34 /* ShapeButton.swift */,
 				BBC2A9C1292CE15900388189 /* TextButton.swift */,
 			);
-			path = Components;
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		BB9ECB962946274D00FF460A /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				BBDA26FF29489F2000E610D2 /* ConditionalViewModifier.swift */,
+				BB3F540B29467D4D00337565 /* EmailComposer.swift */,
+				BBDE41282941311C0052D13D /* PopupViewModifier.swift */,
+				BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		BBDA26F82947D5CA00E610D2 /* Reused */ = {
+			isa = PBXGroup;
+			children = (
+				BB7DEA8229448A430035F6C8 /* Buttons */,
+				BB5ACC62292D234500755A61 /* Rows */,
+				BB3F5427294765BB00337565 /* BackgroundImageView.swift */,
+				BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */,
+				BB7DEA802943F8F60035F6C8 /* InfoPopupView.swift */,
+				BB5ACC65292D243E00755A61 /* SectionHeaderView.swift */,
+			);
+			path = Reused;
+			sourceTree = "<group>";
+		};
+		BBDA26F92947DBDA00E610D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE96E5492913E45A000EBC08 /* Screens */,
+				BBDA26F82947D5CA00E610D2 /* Reused */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBDA26FA29487B3B00E610D2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				BB78D9B7293B8D2C00E0319F /* GameView.swift */,
+				BBA5C98929451F6300369696 /* ConfirmPopupView.swift */,
+				BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */,
+				BBDE41212940C01B0052D13D /* Keybords */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		BBDA26FB29487B6900E610D2 /* Difficulty */ = {
+			isa = PBXGroup;
+			children = (
+				BB71DC77291D49C8007B045D /* DifficultyView.swift */,
+				BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */,
+			);
+			path = Difficulty;
+			sourceTree = "<group>";
+		};
+		BBDA26FC29487B8500E610D2 /* High Scores */ = {
+			isa = PBXGroup;
+			children = (
+				BB5CF4792932702B00814D34 /* HighScoresView.swift */,
+				BBDE4145294286E50052D13D /* HighScoresPopupView.swift */,
+				BB78D9B0293AB12600E0319F /* ScoreColumnView.swift */,
+			);
+			path = "High Scores";
+			sourceTree = "<group>";
+		};
+		BBDA26FD29487BB900E610D2 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */,
+				BB5D42712935051C0077C9E5 /* CircularProgressView.swift */,
+				BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */,
+				BB78D9B4293B534700E0319F /* OverviewCardView.swift */,
+				BB5D427329354C4D0077C9E5 /* SegmentedProgressView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		BBDA26FE29487BF200E610D2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				BB2963222930FB93008D1154 /* AboutView.swift */,
+				BB3F54092946778600337565 /* EmailComposerView.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 		BBDBBA25292CFFA100BB3B8C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				BBDA26FB29487B6900E610D2 /* Difficulty */,
 				BB7DEA7D2943E01E0035F6C8 /* Language */,
-				BB2963222930FB93008D1154 /* AboutView.swift */,
-				BB71DC77291D49C8007B045D /* DifficultyView.swift */,
 				BB71DC75291C62A3007B045D /* SettingsView.swift */,
 				BBCE96F0292E69D300A9535D /* WordsListView.swift */,
 			);
@@ -213,21 +285,9 @@
 			children = (
 				BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */,
 				BBDE41242940C4410052D13D /* EnglishKeyboardView.swift */,
+				BB6E6B932948D3E200A4DF4D /* CharBox.swift */,
 			);
 			path = Keybords;
-			sourceTree = "<group>";
-		};
-		BBDE4142294228D80052D13D /* Popups */ = {
-			isa = PBXGroup;
-			children = (
-				BBDE4147294298DA0052D13D /* AllWordsPopupView.swift */,
-				BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */,
-				BBDE4145294286E50052D13D /* HighScoresPopupView.swift */,
-				BB7DEA7929436C520035F6C8 /* LanguagePopupView.swift */,
-				BBDE4143294228EE0052D13D /* ScoringSystemPopupView.swift */,
-				BB7DEA75294329480035F6C8 /* WinRatePopupView.swift */,
-			);
-			path = Popups;
 			sourceTree = "<group>";
 		};
 		EE3623002913E4980088943C /* Preview Content */ = {
@@ -280,11 +340,12 @@
 			isa = PBXGroup;
 			children = (
 				EEA09D632913B30E00FAFF53 /* Hangman2App.swift */,
-				BBC2A9BF292CDD2300388189 /* Start */,
-				BB5CF4782932700700814D34 /* High Scores */,
+				EEA09D652913B30E00FAFF53 /* StartView.swift */,
+				BBDA26FA29487B3B00E610D2 /* Game */,
+				BBDA26FC29487B8500E610D2 /* High Scores */,
+				BBDA26FD29487BB900E610D2 /* Statistics */,
+				BBDA26FE29487BF200E610D2 /* About */,
 				BBDBBA25292CFFA100BB3B8C /* Settings */,
-				BB78D9B6293B8CE200E0319F /* Game */,
-				BBC2A9C0292CE12F00388189 /* Components */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -311,7 +372,8 @@
 				EE96E5402913BC13000EBC08 /* Configuration */,
 				BB5ACC51292D05CD00755A61 /* Model */,
 				BB5ACC4E292D059000755A61 /* Extensions */,
-				EE96E5492913E45A000EBC08 /* Screens */,
+				BB9ECB962946274D00FF460A /* Modifiers */,
+				BBDA26F92947DBDA00E610D2 /* Views */,
 				EE96E5432913DAC9000EBC08 /* Resources */,
 				EE96E5482913E3CB000EBC08 /* Supporting Files */,
 			);
@@ -415,15 +477,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */,
+				BB7DEA812943F8F60035F6C8 /* InfoPopupView.swift in Sources */,
+				BB6E6B962949BA2100A4DF4D /* OverviewType.swift in Sources */,
 				BB71DC78291D49C8007B045D /* DifficultyView.swift in Sources */,
 				BBDE41292941311C0052D13D /* PopupViewModifier.swift in Sources */,
 				BB9DA8612934E9CA0009B6BB /* StatisticsView.swift in Sources */,
 				BB2963232930FB93008D1154 /* AboutView.swift in Sources */,
 				BB5ACC66292D243E00755A61 /* SectionHeaderView.swift in Sources */,
-				BB7DEA7A29436C520035F6C8 /* LanguagePopupView.swift in Sources */,
+				BB6E6B922948CBE900A4DF4D /* BackImageButton.swift in Sources */,
 				BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */,
 				BBDE4144294228EE0052D13D /* ScoringSystemPopupView.swift in Sources */,
 				BB5ACC64292D235D00755A61 /* DisclosureRowView.swift in Sources */,
+				BB3F540C29467D4D00337565 /* EmailComposer.swift in Sources */,
+				BB3F540A2946778600337565 /* EmailComposerView.swift in Sources */,
 				BBDE41252940C4410052D13D /* EnglishKeyboardView.swift in Sources */,
 				BB5D427429354C4D0077C9E5 /* SegmentedProgressView.swift in Sources */,
 				BBCE96F1292E69D300A9535D /* WordsListView.swift in Sources */,
@@ -434,25 +500,31 @@
 				BB5ACC6A292D70F700755A61 /* WordsLanguageView.swift in Sources */,
 				BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */,
 				BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */,
-				BB7DEA76294329480035F6C8 /* WinRatePopupView.swift in Sources */,
+				BB3F542629473C3500337565 /* Bundle+Informations.swift in Sources */,
 				BB5ACC55292D05FD00755A61 /* GlobalSettings.swift in Sources */,
+				BBDA270029489F2000E610D2 /* ConditionalViewModifier.swift in Sources */,
+				BB7DEA8429448AA90035F6C8 /* CapsuleButton.swift in Sources */,
+				BBA5C98A29451F6300369696 /* ConfirmPopupView.swift in Sources */,
 				BB71DC76291C62A3007B045D /* SettingsView.swift in Sources */,
 				EEA09D662913B30E00FAFF53 /* StartView.swift in Sources */,
 				EEA09D642913B30E00FAFF53 /* Hangman2App.swift in Sources */,
 				BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */,
+				BB3F5428294765BB00337565 /* BackgroundImageView.swift in Sources */,
 				BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */,
+				BB6E6BC02949C47400A4DF4D /* View+PostfixedSpacer.swift in Sources */,
+				BBA5C9882944DDF000369696 /* View+SpecificCornerRadius.swift in Sources */,
 				BB5ACC53292D05E300755A61 /* Language.swift in Sources */,
 				BB5ACC5F292D1BB900755A61 /* CustomNavigationView.swift in Sources */,
 				EE96E5422913BC20000EBC08 /* Constants.swift in Sources */,
 				BB5CF47A2932702B00814D34 /* HighScoresView.swift in Sources */,
 				BBDE4146294286E50052D13D /* HighScoresPopupView.swift in Sources */,
 				BB78D9B1293AB12600E0319F /* ScoreColumnView.swift in Sources */,
+				BB9ECB982946276C00FF460A /* ScrollViewIfNeeded.swift in Sources */,
 				BB5ACC61292D20FB00755A61 /* ToggleRowView.swift in Sources */,
 				BB5ACC6C292D7C7800755A61 /* CheckRowView.swift in Sources */,
 				BB5CF4772932559E00814D34 /* AppSettings.swift in Sources */,
-				BBDE4148294298DA0052D13D /* AllWordsPopupView.swift in Sources */,
 				BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */,
-				BB5ACC68292D257500755A61 /* RadioRowView.swift in Sources */,
+				BB6E6B942948D3E200A4DF4D /* CharBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +675,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -614,10 +687,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -637,6 +710,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,10 +722,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
