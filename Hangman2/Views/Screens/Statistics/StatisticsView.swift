@@ -24,10 +24,7 @@ struct StatisticsView: View {
          Overview()
          Spacer()
       }
-      .background(Constants.Colors.bluewood)
-      .navigationBarBackButtonHidden()
-      .blur(radius: presentWinRateInfoPopup ? 3 : 0)
-      .disabled(presentWinRateInfoPopup)
+      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentWinRateInfoPopup)
       .popup(isPresented: presentWinRateInfoPopup, alignment: .center, direction: .top) {
          InfoPopupView(text: Constants.LocalisedString.winRateInfo) {
             presentWinRateInfoPopup.toggle()

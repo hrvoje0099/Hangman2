@@ -34,9 +34,7 @@ struct GameView: View {
                   print(char)
                }
             }
-            .navigationBarBackButtonHidden()
-            .blur(radius: presentScoringSystemPopup || presentConfirmPopup ? 3 : 0)
-            .disabled(presentScoringSystemPopup || presentConfirmPopup)
+            .groupedViewSetupWhereIsPopup(backgroundColor: .clear, isPresented: (presentScoringSystemPopup || presentConfirmPopup))
             .popup(isPresented: presentScoringSystemPopup, alignment: .center, direction: .top) {
                ScoringSystemPopupView {
                   presentScoringSystemPopup.toggle()

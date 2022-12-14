@@ -27,10 +27,7 @@ struct SettingsView: View {
             Misc()
          }
       }
-      .background(Constants.Colors.bluewood)
-      .navigationBarBackButtonHidden()
-      .blur(radius: presentLanguagePopup ? 3 : 0)
-      .disabled(presentLanguagePopup)
+      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentLanguagePopup)
       .popup(isPresented: presentLanguagePopup, alignment: .center, direction: .top) {
          InfoPopupView(text: Constants.LocalisedString.languageInfo) {
             presentLanguagePopup.toggle()

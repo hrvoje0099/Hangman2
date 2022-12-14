@@ -31,10 +31,7 @@ struct AboutView: View {
             DevelopmentProcess()
          }
       }
-      .background(Constants.Colors.bluewood)
-      .navigationBarBackButtonHidden()
-      .blur(radius: showInfoPopup ? 3 : 0)
-      .disabled(showInfoPopup)
+      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: showInfoPopup)
       .popup(isPresented: showInfoPopup, alignment: .center, direction: .top) {
          InfoPopupView(text: infoMessage) {
             showInfoPopup.toggle()

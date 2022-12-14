@@ -23,10 +23,7 @@ struct HighScoresView: View {
          HighScores(presentPopup: $presentHighScoresInfoPopup)
          Spacer()
       }
-      .background(Constants.Colors.bluewood)
-      .navigationBarBackButtonHidden()
-      .blur(radius: presentHighScoresInfoPopup ? 3 : 0)
-      .disabled(presentHighScoresInfoPopup)
+      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentHighScoresInfoPopup)
       .popup(isPresented: presentHighScoresInfoPopup, alignment: .center, direction: .top) {
          HighScoresPopupView {
             presentHighScoresInfoPopup.toggle()

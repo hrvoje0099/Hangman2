@@ -14,6 +14,7 @@
 		BB3F540C29467D4D00337565 /* EmailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F540B29467D4D00337565 /* EmailComposer.swift */; };
 		BB3F542629473C3500337565 /* Bundle+Informations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F542529473C3500337565 /* Bundle+Informations.swift */; };
 		BB3F5428294765BB00337565 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F5427294765BB00337565 /* BackgroundImageView.swift */; };
+		BB4B9976294A152A006DB2CF /* SetupWhereIsPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B9975294A152A006DB2CF /* SetupWhereIsPopup.swift */; };
 		BB5ACC53292D05E300755A61 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC52292D05E300755A61 /* Language.swift */; };
 		BB5ACC55292D05FD00755A61 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */; };
 		BB5ACC5F292D1BB900755A61 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */; };
@@ -72,6 +73,7 @@
 		BB3F540B29467D4D00337565 /* EmailComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailComposer.swift; sourceTree = "<group>"; };
 		BB3F542529473C3500337565 /* Bundle+Informations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Informations.swift"; sourceTree = "<group>"; };
 		BB3F5427294765BB00337565 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		BB4B9975294A152A006DB2CF /* SetupWhereIsPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWhereIsPopup.swift; sourceTree = "<group>"; };
 		BB5ACC52292D05E300755A61 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				BB3F540B29467D4D00337565 /* EmailComposer.swift */,
 				BBDE41282941311C0052D13D /* PopupViewModifier.swift */,
 				BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */,
+				BB4B9975294A152A006DB2CF /* SetupWhereIsPopup.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				BB5CF475293181BD00814D34 /* ShapeButton.swift in Sources */,
 				BB5D42722935051C0077C9E5 /* CircularProgressView.swift in Sources */,
 				BB5ACC6A292D70F700755A61 /* WordsLanguageView.swift in Sources */,
+				BB4B9976294A152A006DB2CF /* SetupWhereIsPopup.swift in Sources */,
 				BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */,
 				BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */,
 				BB3F542629473C3500337565 /* Bundle+Informations.swift in Sources */,

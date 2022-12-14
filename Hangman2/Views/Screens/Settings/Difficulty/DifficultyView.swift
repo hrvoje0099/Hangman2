@@ -51,10 +51,7 @@ struct DifficultyView: View {
 
          Spacer()
       }
-      .background(Constants.Colors.bluewood)
-      .navigationBarBackButtonHidden()
-      .blur(radius: presentPopup ? 3 : 0)
-      .disabled(presentPopup)
+      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentPopup)
       .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
          DifficultyLevelsPopupView {
             presentPopup.toggle()
