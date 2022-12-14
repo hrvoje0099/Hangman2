@@ -35,11 +35,7 @@ struct ConfirmPopupView: View {
             }
          }
       }
-      .frame(width: 305)
-      .padding()
-      .background(Constants.Colors.seaDeep)
-      .cornerRadius(10)
-      .shadow(color: Constants.Colors.blackBox, radius: 5, x: 0, y: 0)
+      .setupWithCommonModifiers(width: 305, padding: 20)
    }
 }
 

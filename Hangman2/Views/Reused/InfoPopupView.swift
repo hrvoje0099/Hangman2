@@ -29,12 +29,8 @@ struct InfoPopupView: View {
             action()
          }
       }
-      .frame(width: 240)
-      .padding()
+      .setupWithCommonModifiers(width: 240, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
-      .background(Constants.Colors.seaDeep)
-      .cornerRadius(10)
-      .shadow(color: Constants.Colors.blackBox, radius: 5, x: 0, y: 0)
    }
 }
 

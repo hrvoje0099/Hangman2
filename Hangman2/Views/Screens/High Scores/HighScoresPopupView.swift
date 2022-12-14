@@ -36,12 +36,8 @@ struct HighScoresPopupView: View {
             action()
          }
       }
-      .frame(width: 230)
-      .padding()
-      .background(Constants.Colors.seaDeep)
+      .setupWithCommonModifiers(width: 230, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
-      .cornerRadius(10)
-      .shadow(color: Constants.Colors.blackBox, radius: 5, x: 0, y: 0)
    }
 }
 

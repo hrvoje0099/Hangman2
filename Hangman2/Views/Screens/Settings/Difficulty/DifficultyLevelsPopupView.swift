@@ -56,12 +56,8 @@ struct DifficultyLevelsPopupView: View {
             action()
          }
       }
-      .frame(width: 280)
-      .padding()
+      .setupWithCommonModifiers(width: 280, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
-      .background(Constants.Colors.seaDeep)
-      .cornerRadius(10)
-      .shadow(color: Constants.Colors.blackBox, radius: 5, x: 0, y: 0)
    }
 }
 
