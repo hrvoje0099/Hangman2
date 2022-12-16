@@ -10,42 +10,38 @@ import SwiftUI
 // MARK: - Main View
 
 struct CircularProgressView: View {
-   let progress: Double
-   let circleColor: Color
-   let strokeColor: Color
-   let textFont: Font
-   let textColor: Color
+   let progressValue: Double
+   var circleColor = Constants.Colors.azulPetroleo
+   var strokeColor = Constants.Colors.mintLeaf
+   var textFont = Constants.Fonts.patrickHandXL
+   var textColor = Constants.Colors.galeForce
 
-   init(
-      progress: Double,
-      circleColor: Color = Constants.Colors.azulPetroleo,
-      strokeColor: Color = Constants.Colors.mintLeaf,
-      textFont: Font = Constants.Fonts.patrickHandXL,
-      textColor: Color = Constants.Colors.galeForce
-   ) {
-      self.progress = progress
-      self.circleColor = circleColor
-      self.strokeColor = strokeColor
-      self.textFont = textFont
-      self.textColor = textColor
-   }
+   @State private var progressState = CGFloat(0)
 
    var body: some View {
       let lineWidth = CGFloat(12)
-      let progressText = String(format: "%.1f%%", progress * 100)
 
       ZStack {
          Circle()
             .stroke(circleColor, lineWidth: lineWidth)
          Circle()
-            .trim(from: 0, to: CGFloat(self.progress))
+            .trim(from: 0, to: progressState)
             .stroke(strokeColor, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
             .rotationEffect(Angle(degrees: -90))
-            .overlay(
-               Text(progressText)
-                  .font(textFont)
-                  .foregroundColor(textColor)
+            .modifier(
+               AnimatingNumberOverlay(
+                  number: progressState,
+                  alignment: .center,
+                  format: "%.f%%",
+                  textFont: textFont,
+                  textColor: textColor
+               )
             )
+      }
+      .onAppear {
+         withAnimation(.easeInOut(duration: 3)) {
+            progressState = progressValue
+         }
       }
    }
 }
@@ -54,6 +50,6 @@ struct CircularProgressView: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
    static var previews: some View {
-      CircularProgressView(progress: 0.5)
+      CircularProgressView(progressValue: 0.5)
    }
 }

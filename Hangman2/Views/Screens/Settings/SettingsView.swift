@@ -27,7 +27,7 @@ struct SettingsView: View {
             Misc()
          }
       }
-      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentLanguagePopup)
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentLanguagePopup)
       .popup(isPresented: presentLanguagePopup, alignment: .center, direction: .top) {
          InfoPopupView(text: Constants.LocalisedString.languageInfo) {
             presentLanguagePopup.toggle()
@@ -41,6 +41,9 @@ struct SettingsView: View {
 struct Options: View {
    @StateObject private var appSettings = AppSettings.shared
 
+   @State private var isDarkModeOn = AppSettings.shared.appTheme == .dark
+   @State private var isHintOn = GlobalSettings.showHint
+
    var body: some View {
       Section {
          // Dark Mode
@@ -48,7 +51,7 @@ struct Options: View {
             name: Constants.LocalisedString.darkMode,
             onImageName: Constants.Images.moonFill,
             offImageName: Constants.Images.sunMaxFill,
-            bindValue: AppSettings.shared.appTheme == .dark
+            bindValue: $isDarkModeOn
          ) { _ in
             let currentTheme = AppSettings.shared.appTheme
             AppSettings.shared.appTheme = currentTheme == .light ? .dark : .light
@@ -59,7 +62,7 @@ struct Options: View {
             name: Constants.LocalisedString.showHint,
             onImageName: Constants.Images.lightbulbFill,
             offImageName: Constants.Images.lightbulbSlashFill,
-            bindValue: GlobalSettings.showHint
+            bindValue: $isHintOn
          ) { showHint in
             GlobalSettings.showHint = showHint
          }

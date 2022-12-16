@@ -29,7 +29,7 @@ struct InfoPopupView: View {
             action()
          }
       }
-      .setupWithCommonModifiers(width: 240, padding: 15)
+      .setupCommonModifiers(width: 240, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
    }
 }

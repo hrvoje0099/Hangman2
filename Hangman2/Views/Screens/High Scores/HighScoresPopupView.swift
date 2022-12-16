@@ -36,7 +36,7 @@ struct HighScoresPopupView: View {
             action()
          }
       }
-      .setupWithCommonModifiers(width: 230, padding: 15)
+      .setupCommonModifiers(width: 230, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
    }
 }

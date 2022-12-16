@@ -1,5 +1,5 @@
 //
-// SetupWhereIsPopup
+// CommonModifiers2
 // Hangman2
 //
 // Created by Hrvoje
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SetupWhereIsPopup: ViewModifier {
+struct CommonModifiers2: ViewModifier {
    var backgroundColor: Color
    var isPresented: Bool
 
@@ -21,7 +21,7 @@ struct SetupWhereIsPopup: ViewModifier {
 }
 
 extension View {
-   func groupedViewSetupWhereIsPopup(backgroundColor: Color, isPresented: Bool) -> some View {
-      self.modifier(SetupWhereIsPopup(backgroundColor: backgroundColor, isPresented: isPresented))
+   func setupCommonModifiers(backgroundColor: Color, isPresented: Bool) -> some View {
+      self.modifier(CommonModifiers2(backgroundColor: backgroundColor, isPresented: isPresented))
    }
 }

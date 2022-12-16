@@ -56,7 +56,7 @@ struct DifficultyLevelsPopupView: View {
             action()
          }
       }
-      .setupWithCommonModifiers(width: 280, padding: 15)
+      .setupCommonModifiers(width: 280, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
    }
 }

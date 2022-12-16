@@ -35,7 +35,7 @@ struct ConfirmPopupView: View {
             }
          }
       }
-      .setupWithCommonModifiers(width: 305, padding: 20)
+      .setupCommonModifiers(width: 305, padding: 20)
    }
 }
 

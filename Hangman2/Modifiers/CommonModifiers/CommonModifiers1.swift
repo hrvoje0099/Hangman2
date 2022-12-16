@@ -1,5 +1,5 @@
 //
-// SetupWithCommonModifiers
+// CommonModifiers1
 // Hangman2
 //
 // Created by Hrvoje
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SetupWithCommonModifiers: ViewModifier {
+struct CommonModifiers1: ViewModifier {
    var width: CGFloat
    var padding: CGFloat
    var backgroundColor: Color
@@ -24,7 +24,7 @@ struct SetupWithCommonModifiers: ViewModifier {
 }
 
 extension View {
-   func setupWithCommonModifiers(width: CGFloat, padding: CGFloat, backgroundColor: Color = Constants.Colors.seaDeep, cornerRadius: CGFloat = 10) -> some View {
-      self.modifier(SetupWithCommonModifiers(width: width, padding: padding, backgroundColor: backgroundColor, cornerRadius: cornerRadius))
+   func setupCommonModifiers(width: CGFloat, padding: CGFloat, backgroundColor: Color = Constants.Colors.seaDeep, cornerRadius: CGFloat = 10) -> some View {
+      self.modifier(CommonModifiers1(width: width, padding: padding, backgroundColor: backgroundColor, cornerRadius: cornerRadius))
    }
 }

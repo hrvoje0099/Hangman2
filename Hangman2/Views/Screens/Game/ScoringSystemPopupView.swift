@@ -34,7 +34,7 @@ struct ScoringSystemPopupView: View {
             action()
          }
       }
-      .setupWithCommonModifiers(width: 210, padding: 15)
+      .setupCommonModifiers(width: 210, padding: 15)
       .foregroundColor(Constants.Colors.galeForce)
    }
 }

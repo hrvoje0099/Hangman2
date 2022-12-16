@@ -23,7 +23,7 @@ struct HighScoresView: View {
          HighScores(presentPopup: $presentHighScoresInfoPopup)
          Spacer()
       }
-      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentHighScoresInfoPopup)
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentHighScoresInfoPopup)
       .popup(isPresented: presentHighScoresInfoPopup, alignment: .center, direction: .top) {
          HighScoresPopupView {
             presentHighScoresInfoPopup.toggle()

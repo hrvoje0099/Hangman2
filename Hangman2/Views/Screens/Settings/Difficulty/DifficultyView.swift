@@ -51,7 +51,7 @@ struct DifficultyView: View {
 
          Spacer()
       }
-      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentPopup)
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentPopup)
       .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
          DifficultyLevelsPopupView {
             presentPopup.toggle()

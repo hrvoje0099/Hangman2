@@ -12,8 +12,8 @@ import SwiftUI
 struct GameView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State var presentConfirmPopup = false
-   @State var presentScoringSystemPopup = false
+   @State private var presentConfirmPopup = false
+   @State private var presentScoringSystemPopup = false
 
    private let testWord = "ASOCIJACIJA"
    private let testHint = "ovdje ce pisati hint"
@@ -34,7 +34,7 @@ struct GameView: View {
                   print(char)
                }
             }
-            .groupedViewSetupWhereIsPopup(backgroundColor: .clear, isPresented: (presentScoringSystemPopup || presentConfirmPopup))
+            .setupCommonModifiers(backgroundColor: .clear, isPresented: (presentScoringSystemPopup || presentConfirmPopup))
             .popup(isPresented: presentScoringSystemPopup, alignment: .center, direction: .top) {
                ScoringSystemPopupView {
                   presentScoringSystemPopup.toggle()

@@ -31,7 +31,7 @@ struct AboutView: View {
             DevelopmentProcess()
          }
       }
-      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: showInfoPopup)
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: showInfoPopup)
       .popup(isPresented: showInfoPopup, alignment: .center, direction: .top) {
          InfoPopupView(text: infoMessage) {
             showInfoPopup.toggle()

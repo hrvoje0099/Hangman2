@@ -11,7 +11,7 @@ struct ToggleRowView: View {
    let name: LocalizedStringKey
    let onImageName: String
    let offImageName: String
-   @State var bindValue: Bool
+   @Binding var bindValue: Bool
    let action: (Bool) -> Void
 
    var body: some View {
@@ -54,7 +54,7 @@ struct ToggleRowView_Previews: PreviewProvider {
          name: "test",
          onImageName: Constants.Images.lightbulbFill,
          offImageName: Constants.Images.lightbulbSlashFill,
-         bindValue: false
+         bindValue: .constant(false)
       ) { _ in
       }
    }

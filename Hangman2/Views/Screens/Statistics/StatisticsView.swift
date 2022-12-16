@@ -24,7 +24,7 @@ struct StatisticsView: View {
          Overview()
          Spacer()
       }
-      .groupedViewSetupWhereIsPopup(backgroundColor: Constants.Colors.bluewood, isPresented: presentWinRateInfoPopup)
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentWinRateInfoPopup)
       .popup(isPresented: presentWinRateInfoPopup, alignment: .center, direction: .top) {
          InfoPopupView(text: Constants.LocalisedString.winRateInfo) {
             presentWinRateInfoPopup.toggle()
@@ -44,23 +44,23 @@ struct WinRate: View {
       }
 
       HStack {
-         CircularProgressView(progress: 0.50)
+         CircularProgressView(progressValue: 0.596)
             .frame(width: 140, height: 140)
             .padding(15)
 
          VStack {
             VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 100)
+               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 1.00)
                SegmentedProgressView(progress: 100, length: 6)
             }
             Spacer()
             VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 54)
+               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 0.54)
                SegmentedProgressView(progress: 54, length: 6)
             }
             Spacer()
             VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 25)
+               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 0.25)
                SegmentedProgressView(progress: 25, length: 6)
             }
          }

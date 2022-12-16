@@ -10,10 +10,8 @@ import SwiftUI
 // MARK: - Main View
 
 struct StartView: View {
-   @State private var path = NavigationPath()
-
    var body: some View {
-      NavigationStack(path: $path) {
+      NavigationStack() {
          ZStack {
             BackgroundImageView(imageName: Constants.Images.backgroundStart)
             VStack {
@@ -21,7 +19,7 @@ struct StartView: View {
                Spacer()
                Logo()
                Spacer()
-               GameButtons(path: $path)
+               GameButtons()
             }
          }
       }
@@ -69,8 +67,6 @@ struct Logo: View {
 }
 
 struct GameButtons: View {
-   @Binding var path: NavigationPath
-
    var body: some View {
       VStack(spacing: 30) {
          NavigationLink(destination: GameView()) {

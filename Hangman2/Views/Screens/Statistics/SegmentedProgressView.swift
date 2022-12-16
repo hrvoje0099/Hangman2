@@ -18,6 +18,8 @@ struct SegmentedProgressView: View {
    var backgroundColor = Constants.Colors.azulPetroleo
    var height = CGFloat(10)
 
+   @State private var progressState = CGFloat(0)
+
    @ViewBuilder
    var dividerLine: some View {
       Rectangle()
@@ -46,7 +48,7 @@ struct SegmentedProgressView: View {
                .mask(alignment: .leading) {
                   Capsule()
                      .frame(height: self.height)
-                     .frame(maxWidth: geo.size.width * (progress / 100), alignment: .leading)
+                     .frame(maxWidth: geo.size.width * (progressState / 100), alignment: .leading)
                }
 
             HStack {
@@ -58,6 +60,11 @@ struct SegmentedProgressView: View {
             }
          }
          .frame(height: self.height)
+         .onAppear {
+            withAnimation(.linear(duration: 3)) {
+               progressState = progress
+            }
+         }
       }
    }
 }

@@ -11,16 +11,31 @@ import SwiftUI
 
 struct DifficultyRateView: View {
    let difficultyName: LocalizedStringKey
-   let rateValue: Int
+   let rateValue: CGFloat
    var textFont = Constants.Fonts.patrickHand2XS
+
+   @State private var rateState = CGFloat(0)
 
    var body: some View {
       HStack {
          Text(difficultyName)
          Spacer()
-         Text("\(rateValue)%")
+            .modifier(
+               AnimatingNumberOverlay(
+                  number: rateState,
+                  alignment: .trailing,
+                  format: "%.f%%",
+                  textFont: textFont,
+                  textColor: .primary
+               )
+            )
       }
       .font(textFont)
+      .onAppear {
+         withAnimation(.easeInOut(duration: 3)) {
+            rateState = rateValue
+         }
+      }
    }
 }
 
@@ -28,6 +43,10 @@ struct DifficultyRateView: View {
 
 struct DifficultyRateView_Previews: PreviewProvider {
    static var previews: some View {
-      DifficultyRateView(difficultyName: "easy", rateValue: 77)
+      VStack {
+         DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 1.00)
+         DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 0.54)
+         DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 0.25)
+      }
    }
 }
