@@ -1,0 +1,12 @@
+{
+  "donationIds": [
+    "com.fairese.nae.sDonationT1",
+    "com.fairese.nae.sDonationT2",
+    "com.fairese.nae.sDonationT3",
+    "com.fairese.nae.sDonationT11"
+  ],
+  "functionalityIds": [
+    "com.fairese.nae.silviannaPro",
+    "com.fairese.nae.silviannaProTrial"
+  ]
+}
