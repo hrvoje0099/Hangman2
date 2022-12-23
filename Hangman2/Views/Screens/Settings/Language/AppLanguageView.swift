@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct AppLanguageView: View {
    @Environment(\.dismiss) var dismiss
 
    @Binding var appLanguage: Language
-
-   // MARK: - Body
 
    var body: some View {
       VStack {
@@ -39,7 +39,7 @@ struct AppLanguageView: View {
       .navigationBarBackButtonHidden()
    }
 
-   // MARK: - Helper Methods
+   // Helper Methods
 
    private func isLangSelected(_ lang: Language) -> Bool {
       lang == appLanguage
@@ -49,6 +49,8 @@ struct AppLanguageView: View {
       self.appLanguage = appLanguage
    }
 }
+
+// MARK: - Preview
 
 struct AppLanguageView_Previews: PreviewProvider {
    static var previews: some View {

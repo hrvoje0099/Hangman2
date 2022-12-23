@@ -41,7 +41,7 @@ struct ScoringSystemPopupView: View {
 
 // MARK: - View Parts
 
-struct TextRow: View {
+private struct TextRow: View {
    let prefixText: LocalizedStringKey
    let postfixText: String
 

@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct WordsLanguageView: View {
    @Environment(\.dismiss) var dismiss
 
-   @Binding var wordsLanguage: Language
+   @EnvironmentObject private var wordModel: WordModel
 
-   // MARK: - Bodz
+   @Binding var wordsLanguage: Language
 
    var body: some View {
       VStack {
@@ -39,7 +41,7 @@ struct WordsLanguageView: View {
       .navigationBarBackButtonHidden()
    }
 
-   // MARK: - Helper Methods
+   // Helper Methods
 
    private func isLangSelected(_ lang: Language) -> Bool {
       lang == wordsLanguage
@@ -47,8 +49,11 @@ struct WordsLanguageView: View {
 
    private func changeWordsLanguage(to wordsLanguage: Language) {
       self.wordsLanguage = wordsLanguage
+      wordModel.getAllWords()
    }
 }
+
+// MARK: - Preview
 
 struct WordsLanguageView_Previews: PreviewProvider {
    static var previews: some View {

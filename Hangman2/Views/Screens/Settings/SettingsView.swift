@@ -12,7 +12,7 @@ import SwiftUI
 struct SettingsView: View {
    @Environment(\.dismiss) var dismiss
 
-   @State private var isShowHint = false
+   @State private var appSettings = AppSettings.shared
    @State private var presentLanguagePopup = false
 
    var body: some View {
@@ -22,9 +22,9 @@ struct SettingsView: View {
          }
 
          ScrollViewIfNeeded {
-            Options()
-            Languages(presentPopup: $presentLanguagePopup)
-            Misc()
+            optionsView
+            languagesView
+            miscView
          }
       }
       .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentLanguagePopup)
@@ -38,20 +38,15 @@ struct SettingsView: View {
 
 // MARK: - View Parts
 
-struct Options: View {
-   @StateObject private var appSettings = AppSettings.shared
-
-   @State private var isDarkModeOn = AppSettings.shared.appTheme == .dark
-   @State private var isHintOn = GlobalSettings.showHint
-
-   var body: some View {
+extension SettingsView {
+   private var optionsView: some View {
       Section {
          // Dark Mode
          ToggleRowView(
             name: Constants.LocalisedString.darkMode,
             onImageName: Constants.Images.moonFill,
             offImageName: Constants.Images.sunMaxFill,
-            bindValue: $isDarkModeOn
+            isOn: appSettings.appTheme == .dark
          ) { _ in
             let currentTheme = AppSettings.shared.appTheme
             AppSettings.shared.appTheme = currentTheme == .light ? .dark : .light
@@ -62,16 +57,16 @@ struct Options: View {
             name: Constants.LocalisedString.showHint,
             onImageName: Constants.Images.lightbulbFill,
             offImageName: Constants.Images.lightbulbSlashFill,
-            bindValue: $isHintOn
+            isOn: GlobalSettings.showHint
          ) { showHint in
             GlobalSettings.showHint = showHint
          }
 
          // Difficulty Levels
-         NavigationLink(destination: DifficultyView(gameDifficulty: $appSettings.gameDifficulty)) {
+         NavigationLink(destination: DifficultyView()) {
             DisclosureRowView(
                title: Constants.LocalisedString.difficultyLevels,
-               trailingText: appSettings.gameDifficulty.localised
+               trailingText: GlobalSettings.gameDifficulty.localised
             )
          }
       } header: {
@@ -79,14 +74,8 @@ struct Options: View {
             .padding(.bottom, 10)
       }
    }
-}
 
-struct Languages: View {
-   @Binding var presentPopup: Bool
-
-   @StateObject private var appSettings = AppSettings.shared
-
-   var body: some View {
+   private var languagesView: some View {
       Section {
          // App Language
          NavigationLink(destination: AppLanguageView(appLanguage: $appSettings.appLanguage)) {
@@ -99,16 +88,14 @@ struct Languages: View {
          }
       } header: {
          SectionHeaderView(text: Constants.LocalisedString.language, withInfo: true) {
-            presentPopup.toggle()
+            presentLanguagePopup.toggle()
          }
          .padding(.top, 20)
          .padding(.bottom, 10)
       }
    }
-}
 
-struct Misc: View {
-   var body: some View {
+   private var miscView: some View {
       Section {
          // List of all words
          NavigationLink(destination: WordsListView()) {

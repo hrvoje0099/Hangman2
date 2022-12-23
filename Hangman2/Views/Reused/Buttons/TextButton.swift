@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct TextButton: View {
    let text: LocalizedStringKey
    var font = Constants.Fonts.patrickHandXS
@@ -41,6 +43,8 @@ struct TextButton: View {
       .padding([.top, .bottom], outsidePadding)
    }
 }
+
+// MARK: - Preview
 
 struct TextButton_Previews: PreviewProvider {
    static var previews: some View {

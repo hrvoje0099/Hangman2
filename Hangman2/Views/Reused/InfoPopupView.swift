@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct InfoPopupView: View {
    let text: LocalizedStringKey
    let action: () -> Void
@@ -33,6 +35,8 @@ struct InfoPopupView: View {
       .foregroundColor(Constants.Colors.galeForce)
    }
 }
+
+// MARK: - Preview
 
 struct InfoPopupView_Previews: PreviewProvider {
     static var previews: some View {

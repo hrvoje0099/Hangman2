@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct CapsuleButton: View {
    let image: String
    let text: String
@@ -31,6 +33,8 @@ struct CapsuleButton: View {
       }
    }
 }
+
+// MARK: - Preview
 
 struct CapsuleButton_Previews: PreviewProvider {
    static var previews: some View {

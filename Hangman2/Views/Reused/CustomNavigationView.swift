@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct CustomNavigationView: View {
    let title: LocalizedStringKey
    let action: () -> Void
@@ -27,6 +29,8 @@ struct CustomNavigationView: View {
       .background(Constants.Colors.bluewood)
    }
 }
+
+// MARK: - Preview
 
 struct CustomNavigationView_Previews: PreviewProvider {
    static var previews: some View {

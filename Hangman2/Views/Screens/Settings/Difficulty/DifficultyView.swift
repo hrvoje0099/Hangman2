@@ -10,20 +10,9 @@ import SwiftUI
 // MARK: - Main View
 
 struct DifficultyView: View {
-
-   // Properties
-
    @Environment(\.dismiss) var dismiss
 
-   @Binding var gameDifficulty: Difficulty
-
-   @State private var presentPopup = false
-
-   @State private var isEasy = false
-   @State private var isMedium = true
-   @State private var isHard = false
-
-   // Body
+   @State private var presentDifficultyLevelsPopup = false
 
    var body: some View {
       VStack {
@@ -45,16 +34,16 @@ struct DifficultyView: View {
             }
          } header: {
             SectionHeaderView(text: Constants.LocalisedString.selectGameDifficultyLvl, withInfo: true) {
-               presentPopup.toggle()
+               presentDifficultyLevelsPopup.toggle()
             }
          }
 
          Spacer()
       }
-      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentPopup)
-      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentDifficultyLevelsPopup)
+      .popup(isPresented: presentDifficultyLevelsPopup, alignment: .center, direction: .top) {
          DifficultyLevelsPopupView {
-            presentPopup.toggle()
+            presentDifficultyLevelsPopup.toggle()
          }
       }
    }
@@ -62,11 +51,11 @@ struct DifficultyView: View {
    // Helper Methods
 
    private func isDifficultySelected(_ difficulty: Difficulty) -> Bool {
-      return difficulty == gameDifficulty
+      return difficulty == GlobalSettings.gameDifficulty
    }
 
    private func changeGameDifficulty(to difficulty: Difficulty) {
-      self.gameDifficulty = difficulty
+      GlobalSettings.gameDifficulty = difficulty
    }
 }
 
@@ -74,13 +63,13 @@ struct DifficultyView: View {
 
 struct DifficultyView_Previews: PreviewProvider {
    static var previews: some View {
-      DifficultyView(gameDifficulty: .constant(.easy))
+      DifficultyView()
          .environment(\.locale, .init(identifier: "hr"))
          .preferredColorScheme(.dark)
          .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
          .previewDisplayName("iPhone 14 Pro")
 
-      DifficultyView(gameDifficulty: .constant(.hard))
+      DifficultyView()
          .environment(\.locale, .init(identifier: "en"))
          .preferredColorScheme(.light)
          .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))

@@ -42,7 +42,7 @@ struct AboutView: View {
 
 // MARK: - View Parts
 
-struct PortraitImage: View {
+private struct PortraitImage: View {
    var body: some View {
       Image(Constants.Images.mePortrait)
          .resizable()
@@ -53,7 +53,7 @@ struct PortraitImage: View {
    }
 }
 
-struct GameInfo: View {
+private struct GameInfo: View {
    var body: some View {
       Group {
          Text(Bundle.main.appName)
@@ -68,7 +68,7 @@ struct GameInfo: View {
    }
 }
 
-struct ContactReportInfo: View {
+private struct ContactReportInfo: View {
    @State private var showReportBugEmailComposer = false
    @State private var showFeatureRequestEmailComposer = false
 
@@ -160,7 +160,7 @@ struct ContactReportInfo: View {
    }
 }
 
-struct ContactMe: View {
+private struct ContactMe: View {
    var body: some View {
       Group {
          Text(Constants.LocalisedString.contactMe)
@@ -206,7 +206,7 @@ struct ContactMe: View {
    }
 }
 
-struct DevelopmentProcess: View {
+private struct DevelopmentProcess: View {
    var body: some View {
       Group {
          Text(Constants.LocalisedString.appDevelopmentProcess)
@@ -232,18 +232,10 @@ struct DevelopmentProcess: View {
    }
 }
 
-// MARK: - Previews
+// MARK: - Preview
 
 struct AboutView_Previews: PreviewProvider {
    static var previews: some View {
       AboutView()
-         .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
-         .previewDisplayName("iPhone 13 mini")
-         .environment(\.locale, .init(identifier: "hr"))
-
-      AboutView()
-         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
-         .previewDisplayName("iPhone 14 Pro")
-         .environment(\.locale, .init(identifier: "eb"))
    }
 }

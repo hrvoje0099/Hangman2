@@ -21,7 +21,7 @@ struct SegmentedProgressView: View {
    @State private var progressState = CGFloat(0)
 
    @ViewBuilder
-   var dividerLine: some View {
+   private var dividerLine: some View {
       Rectangle()
          .fill(spaceColor)
          .frame(width: 2, height: self.height)

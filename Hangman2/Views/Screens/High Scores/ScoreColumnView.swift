@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct ScoreColumnView: View {
    let title: LocalizedStringKey
    let value: String
@@ -22,6 +24,8 @@ struct ScoreColumnView: View {
       }
    }
 }
+
+// MARK: - Preview
 
 struct ScoreColumnView_Previews: PreviewProvider {
    static var previews: some View {

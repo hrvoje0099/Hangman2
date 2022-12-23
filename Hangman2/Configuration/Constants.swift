@@ -203,4 +203,8 @@ enum Constants {
       static let twitter                     = "Twitter"
       static let youtube                     = "YouTube"
    }
+
+   enum Request {
+      static let baseURL      = "https://hrvoje0099.github.io/"
+   }
 }

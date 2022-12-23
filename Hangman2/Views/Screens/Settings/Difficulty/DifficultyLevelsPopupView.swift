@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct DifficultyLevelsPopupView: View {
    let action: () -> Void
 
@@ -60,6 +62,8 @@ struct DifficultyLevelsPopupView: View {
       .foregroundColor(Constants.Colors.galeForce)
    }
 }
+
+// MARK: - Preview
 
 struct DifficultyLevelsPopupView_Previews: PreviewProvider {
    static var previews: some View {

@@ -10,8 +10,13 @@ import SwiftUI
 // MARK: - Main View
 
 struct StartView: View {
+   @EnvironmentObject private var wordModel: WordModel
+
+   @State private var presentInfoPopup = false
+   @State private var infoMessage = ""
+
    var body: some View {
-      NavigationStack() {
+      NavigationStack {
          ZStack {
             BackgroundImageView(imageName: Constants.Images.backgroundStart)
             VStack {
@@ -23,20 +28,27 @@ struct StartView: View {
             }
          }
       }
+      .onReceive(wordModel.$errorMessage) { errorMessage in
+         if !errorMessage.isEmpty {
+            infoMessage = errorMessage
+            presentInfoPopup.toggle()
+         }
+      }
+      .popup(isPresented: presentInfoPopup, alignment: .center, direction: .top) {
+         InfoPopupView(text: LocalizedStringKey(infoMessage)) {
+            presentInfoPopup.toggle()
+         }
+      }
    }
 }
 
 // MARK: - View Parts
 
-struct HeaderButtons: View {
+private struct HeaderButtons: View {
    var body: some View {
       VStack {
          HStack {
             VStack(alignment: .leading) {
-               #warning("""
-               Nad ovim NavigationLink-ovima kada implementiramo ViewModel mozemo dodati factory za kreiranje destination views-a. Isto vrijedi i za game buttons-e dolje.
-               Primjer u clanku 'Avoiding massive SwiftUI views'
-               """)
                NavigationLink(destination: StatisticsView()) {
                   Image(Constants.Images.statistics)
                }
@@ -59,14 +71,14 @@ struct HeaderButtons: View {
    }
 }
 
-struct Logo: View {
+private struct Logo: View {
    var body: some View {
       Image(Constants.Images.logoAppName)
       Spacer()
    }
 }
 
-struct GameButtons: View {
+private struct GameButtons: View {
    var body: some View {
       VStack(spacing: 30) {
          NavigationLink(destination: GameView()) {
@@ -95,7 +107,7 @@ struct GameButtons: View {
    }
 }
 
-// MARK: - Previews
+// MARK: - Preview
 
 struct StartView_Previews: PreviewProvider {
    static var previews: some View {

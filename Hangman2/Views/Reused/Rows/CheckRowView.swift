@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct CheckRowView: View {
    @Environment(\.dismiss) var dismiss
 
@@ -40,6 +42,8 @@ struct CheckRowView: View {
       }
    }
 }
+
+// MARK: - Preview
 
 struct CheckRowView_Previews: PreviewProvider {
    static var previews: some View {

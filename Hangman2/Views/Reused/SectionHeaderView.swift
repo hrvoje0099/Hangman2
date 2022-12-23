@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct SectionHeaderView: View {
    let text: LocalizedStringKey
    var withInfo = false
@@ -34,6 +36,8 @@ struct SectionHeaderView: View {
       .background(Constants.Colors.limedSpruce)
    }
 }
+
+// MARK: - Preview
 
 struct SectionHeaderView_Previews: PreviewProvider {
    static var previews: some View {

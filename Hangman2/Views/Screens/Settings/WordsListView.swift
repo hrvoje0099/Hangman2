@@ -10,16 +10,10 @@ import SwiftUI
 // MARK: - Main View
 
 struct WordsListView: View {
-
-   // Propertiess
-
    @Environment(\.dismiss) var dismiss
 
-   @State private var presentPopup = false
-
-   let wordsListExample = ["apple", "dog", "cat", "air", "debug"]
-
-   // Body
+   @State private var presentWordsInfoPopup = false
+   @EnvironmentObject private var wordModel: WordModel
 
    var body: some View {
       VStack {
@@ -28,7 +22,7 @@ struct WordsListView: View {
          }
 
          SectionHeaderView(text: getSectionHeaderTitle(), withInfo: true) {
-            presentPopup.toggle()
+            presentWordsInfoPopup.toggle()
          }
 
          ScrollView {
@@ -39,9 +33,9 @@ struct WordsListView: View {
                ],
                spacing: 10
             ) {
-               ForEach(wordsListExample, id: \.self) { word in
+               ForEach(wordModel.allWords) { wordObject in
                   HStack {
-                     Text(word)
+                     Text(wordObject.word)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(Constants.Fonts.patrickHand)
                         .foregroundColor(Constants.Colors.galeForce)
@@ -55,10 +49,10 @@ struct WordsListView: View {
 
          Spacer()
       }
-      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentPopup)
-      .popup(isPresented: presentPopup, alignment: .center, direction: .top) {
+      .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentWordsInfoPopup)
+      .popup(isPresented: presentWordsInfoPopup, alignment: .center, direction: .top) {
          InfoPopupView(text: Constants.LocalisedString.listOfAllWordsInfo) {
-            presentPopup.toggle()
+            presentWordsInfoPopup.toggle()
          }
       }
    }
@@ -80,6 +74,12 @@ struct WordsListView: View {
 
 struct WordsListView_Previews: PreviewProvider {
    static var previews: some View {
-      WordsListView()
+      Group {
+         WordsListView().environmentObject({ () -> WordModel in
+            let wordModel = WordModel(wordService: WordService())
+            wordModel.getAllWords()
+            return wordModel
+         }())
+      }
    }
 }

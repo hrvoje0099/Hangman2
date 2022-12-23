@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum Difficulty: Int, Codable {
-   case easy
-   case medium
-   case hard
+   case easy   = 1
+   case medium = 2
+   case hard   = 3
 
    var localised: LocalizedStringKey {
       switch self {

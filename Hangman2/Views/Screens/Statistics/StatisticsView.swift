@@ -20,7 +20,7 @@ struct StatisticsView: View {
             dismiss()
          }
 
-         WinRate(presentPopup: $presentWinRateInfoPopup)
+         winRateView
          Overview()
          Spacer()
       }
@@ -35,45 +35,45 @@ struct StatisticsView: View {
 
 // MARK: - View Parts
 
-struct WinRate: View {
-   @Binding var presentPopup: Bool
-
-   var body: some View {
-      SectionHeaderView(text: Constants.LocalisedString.winRate, withInfo: true) {
-         presentPopup.toggle()
-      }
-
-      HStack {
-         CircularProgressView(progressValue: 0.596)
-            .frame(width: 140, height: 140)
-            .padding(15)
-
-         VStack {
-            VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 1.00)
-               SegmentedProgressView(progress: 100, length: 6)
-            }
-            Spacer()
-            VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 0.54)
-               SegmentedProgressView(progress: 54, length: 6)
-            }
-            Spacer()
-            VStack(spacing: 5) {
-               DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 0.25)
-               SegmentedProgressView(progress: 25, length: 6)
-            }
+extension StatisticsView {
+   private var winRateView: some View {
+      Group {
+         SectionHeaderView(text: Constants.LocalisedString.winRate, withInfo: true) {
+            presentWinRateInfoPopup.toggle()
          }
-         .frame(height: 140)
-         .padding(.trailing, 15)
+
+         HStack {
+            CircularProgressView(progressValue: 0.596)
+               .frame(width: 140, height: 140)
+               .padding(15)
+
+            VStack {
+               VStack(spacing: 5) {
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 1.00)
+                  SegmentedProgressView(progress: 100, length: 6)
+               }
+               Spacer()
+               VStack(spacing: 5) {
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 0.54)
+                  SegmentedProgressView(progress: 54, length: 6)
+               }
+               Spacer()
+               VStack(spacing: 5) {
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 0.25)
+                  SegmentedProgressView(progress: 25, length: 6)
+               }
+            }
+            .frame(height: 140)
+            .padding(.trailing, 15)
+         }
+         .background(Constants.Colors.seaDeep)
+         .cornerRadius(15)
+         .padding(15)
       }
-      .background(Constants.Colors.seaDeep)
-      .cornerRadius(15)
-      .padding(15)
    }
 }
 
-struct Overview: View {
+private struct Overview: View {
    var body: some View {
       SectionHeaderView(text: Constants.LocalisedString.overview)
 
@@ -101,12 +101,10 @@ struct Overview: View {
    }
 }
 
-// MARK: - Previews
+// MARK: - Preview
 
 struct StatisticsView_Previews: PreviewProvider {
    static var previews: some View {
-      ForEach(ColorScheme.allCases, id: \.self) {
-         StatisticsView().preferredColorScheme($0)
-      }
+      StatisticsView()
    }
 }

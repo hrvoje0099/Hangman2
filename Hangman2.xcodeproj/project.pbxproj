@@ -16,6 +16,10 @@
 		BB3F5428294765BB00337565 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3F5427294765BB00337565 /* BackgroundImageView.swift */; };
 		BB4B9976294A152A006DB2CF /* CommonModifiers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B9975294A152A006DB2CF /* CommonModifiers2.swift */; };
 		BB4B997A294A1FD4006DB2CF /* CommonModifiers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B9979294A1FD4006DB2CF /* CommonModifiers1.swift */; };
+		BB4F5726294E6E790072FFC9 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F5725294E6E790072FFC9 /* HttpClient.swift */; };
+		BB4F5728294E72BA0072FFC9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F5727294E72BA0072FFC9 /* Networking.swift */; };
+		BB4F572C294E75E00072FFC9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F572B294E75E00072FFC9 /* Word.swift */; };
+		BB4F5734294E87DF0072FFC9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F5733294E87DF0072FFC9 /* Route.swift */; };
 		BB4FAB45294B62060060038A /* AnimatingNumberOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4FAB44294B62060060038A /* AnimatingNumberOverlay.swift */; };
 		BB5ACC53292D05E300755A61 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC52292D05E300755A61 /* Language.swift */; };
 		BB5ACC55292D05FD00755A61 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */; };
@@ -48,9 +52,11 @@
 		BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA85E2934E0560009B6BB /* Difficulty.swift */; };
 		BB9DA8612934E9CA0009B6BB /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */; };
 		BB9ECB982946276C00FF460A /* ScrollViewIfNeeded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */; };
+		BBA5580A29507D960015F482 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5580929507D960015F482 /* WordModel.swift */; };
 		BBA5C9882944DDF000369696 /* View+SpecificCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5C9872944DDF000369696 /* View+SpecificCornerRadius.swift */; };
 		BBA5C98A29451F6300369696 /* ConfirmPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5C98929451F6300369696 /* ConfirmPopupView.swift */; };
 		BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2A9C1292CE15900388189 /* TextButton.swift */; };
+		BBC3C8B22951FB970091F5FE /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC3C8B12951FB970091F5FE /* WordService.swift */; };
 		BBCE96F1292E69D300A9535D /* WordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE96F0292E69D300A9535D /* WordsListView.swift */; };
 		BBDA270029489F2000E610D2 /* ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDA26FF29489F2000E610D2 /* ConditionalViewModifier.swift */; };
 		BBDE41232940C0340052D13D /* CroatianKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */; };
@@ -77,6 +83,10 @@
 		BB3F5427294765BB00337565 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		BB4B9975294A152A006DB2CF /* CommonModifiers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModifiers2.swift; sourceTree = "<group>"; };
 		BB4B9979294A1FD4006DB2CF /* CommonModifiers1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModifiers1.swift; sourceTree = "<group>"; };
+		BB4F5725294E6E790072FFC9 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		BB4F5727294E72BA0072FFC9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		BB4F572B294E75E00072FFC9 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		BB4F5733294E87DF0072FFC9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		BB4FAB44294B62060060038A /* AnimatingNumberOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingNumberOverlay.swift; sourceTree = "<group>"; };
 		BB5ACC52292D05E300755A61 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BB5ACC54292D05FD00755A61 /* GlobalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
@@ -109,9 +119,12 @@
 		BB9DA85E2934E0560009B6BB /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		BB9DA8602934E9CA0009B6BB /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		BB9ECB972946276C00FF460A /* ScrollViewIfNeeded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewIfNeeded.swift; sourceTree = "<group>"; };
+		BBA5580929507D960015F482 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		BBA5C9872944DDF000369696 /* View+SpecificCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SpecificCornerRadius.swift"; sourceTree = "<group>"; };
 		BBA5C98929451F6300369696 /* ConfirmPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPopupView.swift; sourceTree = "<group>"; };
 		BBC2A9C1292CE15900388189 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		BBC3C8B12951FB970091F5FE /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
+		BBCC5EFA294D0BC800CC4051 /* Hangman2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hangman2.entitlements; sourceTree = "<group>"; };
 		BBCE96F0292E69D300A9535D /* WordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListView.swift; sourceTree = "<group>"; };
 		BBDA26FF29489F2000E610D2 /* ConditionalViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalViewModifier.swift; sourceTree = "<group>"; };
 		BBDE41222940C0340052D13D /* CroatianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroatianKeyboardView.swift; sourceTree = "<group>"; };
@@ -149,6 +162,34 @@
 			path = CommonModifiers;
 			sourceTree = "<group>";
 		};
+		BB4F5724294E4CCC0072FFC9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BBC3C8B12951FB970091F5FE /* WordService.swift */,
+				BB4F5733294E87DF0072FFC9 /* Route.swift */,
+				BB4F5727294E72BA0072FFC9 /* Networking.swift */,
+				BB4F5725294E6E790072FFC9 /* HttpClient.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB4F5735294F065B0072FFC9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EEA09D632913B30E00FAFF53 /* Hangman2App.swift */,
+				BBA5580929507D960015F482 /* WordModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BB4F5736294F06680072FFC9 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				EEA09D652913B30E00FAFF53 /* StartView.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		BB5ACC4E292D059000755A61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +207,7 @@
 				BB5ACC52292D05E300755A61 /* Language.swift */,
 				BB7DEA7B2943DD190035F6C8 /* Theme.swift */,
 				BB6E6B952949BA2100A4DF4D /* OverviewType.swift */,
+				BB4F572B294E75E00072FFC9 /* Word.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +271,7 @@
 		BBDA26F92947DBDA00E610D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB4F5735294F065B0072FFC9 /* App */,
 				EE96E5492913E45A000EBC08 /* Screens */,
 				BBDA26F82947D5CA00E610D2 /* Reused */,
 			);
@@ -289,10 +332,10 @@
 		BBDBBA25292CFFA100BB3B8C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BBDA26FB29487B6900E610D2 /* Difficulty */,
-				BB7DEA7D2943E01E0035F6C8 /* Language */,
 				BB71DC75291C62A3007B045D /* SettingsView.swift */,
 				BBCE96F0292E69D300A9535D /* WordsListView.swift */,
+				BBDA26FB29487B6900E610D2 /* Difficulty */,
+				BB7DEA7D2943E01E0035F6C8 /* Language */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -348,6 +391,7 @@
 		EE96E5482913E3CB000EBC08 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBCC5EFA294D0BC800CC4051 /* Hangman2.entitlements */,
 				EE96E5472913DB45000EBC08 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -356,8 +400,7 @@
 		EE96E5492913E45A000EBC08 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				EEA09D632913B30E00FAFF53 /* Hangman2App.swift */,
-				EEA09D652913B30E00FAFF53 /* StartView.swift */,
+				BB4F5736294F06680072FFC9 /* Start */,
 				BBDA26FA29487B3B00E610D2 /* Game */,
 				BBDA26FC29487B8500E610D2 /* High Scores */,
 				BBDA26FD29487BB900E610D2 /* Statistics */,
@@ -387,9 +430,10 @@
 			isa = PBXGroup;
 			children = (
 				EE96E5402913BC13000EBC08 /* Configuration */,
-				BB5ACC51292D05CD00755A61 /* Model */,
 				BB5ACC4E292D059000755A61 /* Extensions */,
+				BB5ACC51292D05CD00755A61 /* Model */,
 				BB9ECB962946274D00FF460A /* Modifiers */,
+				BB4F5724294E4CCC0072FFC9 /* Utilities */,
 				BBDA26F92947DBDA00E610D2 /* Views */,
 				EE96E5432913DAC9000EBC08 /* Resources */,
 				EE96E5482913E3CB000EBC08 /* Supporting Files */,
@@ -494,9 +538,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC2A9C2292CE15900388189 /* TextButton.swift in Sources */,
+				BB4F5728294E72BA0072FFC9 /* Networking.swift in Sources */,
 				BB7DEA812943F8F60035F6C8 /* InfoPopupView.swift in Sources */,
 				BB4FAB45294B62060060038A /* AnimatingNumberOverlay.swift in Sources */,
 				BB6E6B962949BA2100A4DF4D /* OverviewType.swift in Sources */,
+				BB4F5726294E6E790072FFC9 /* HttpClient.swift in Sources */,
 				BB4B997A294A1FD4006DB2CF /* CommonModifiers1.swift in Sources */,
 				BB71DC78291D49C8007B045D /* DifficultyView.swift in Sources */,
 				BBDE41292941311C0052D13D /* PopupViewModifier.swift in Sources */,
@@ -507,6 +553,7 @@
 				BB9DA85F2934E0560009B6BB /* Difficulty.swift in Sources */,
 				BBDE4144294228EE0052D13D /* ScoringSystemPopupView.swift in Sources */,
 				BB5ACC64292D235D00755A61 /* DisclosureRowView.swift in Sources */,
+				BB4F5734294E87DF0072FFC9 /* Route.swift in Sources */,
 				BB3F540C29467D4D00337565 /* EmailComposer.swift in Sources */,
 				BB3F540A2946778600337565 /* EmailComposerView.swift in Sources */,
 				BBDE41252940C4410052D13D /* EnglishKeyboardView.swift in Sources */,
@@ -529,6 +576,7 @@
 				EEA09D662913B30E00FAFF53 /* StartView.swift in Sources */,
 				EEA09D642913B30E00FAFF53 /* Hangman2App.swift in Sources */,
 				BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */,
+				BBC3C8B22951FB970091F5FE /* WordService.swift in Sources */,
 				BB3F5428294765BB00337565 /* BackgroundImageView.swift in Sources */,
 				BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */,
 				BB6E6BC02949C47400A4DF4D /* View+PostfixedSpacer.swift in Sources */,
@@ -536,6 +584,8 @@
 				BB5ACC53292D05E300755A61 /* Language.swift in Sources */,
 				BB5ACC5F292D1BB900755A61 /* CustomNavigationView.swift in Sources */,
 				EE96E5422913BC20000EBC08 /* Constants.swift in Sources */,
+				BB4F572C294E75E00072FFC9 /* Word.swift in Sources */,
+				BBA5580A29507D960015F482 /* WordModel.swift in Sources */,
 				BB5CF47A2932702B00814D34 /* HighScoresView.swift in Sources */,
 				BBDE4146294286E50052D13D /* HighScoresPopupView.swift in Sources */,
 				BB78D9B1293AB12600E0319F /* ScoreColumnView.swift in Sources */,
@@ -684,6 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hangman2/Supporting Files/Hangman2.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hangman2/Resources/Preview Content\"";
@@ -719,6 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hangman2/Supporting Files/Hangman2.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hangman2/Resources/Preview Content\"";

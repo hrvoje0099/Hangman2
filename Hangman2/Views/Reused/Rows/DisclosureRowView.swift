@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct DisclosureRowView: View {
    let title: LocalizedStringKey
    var trailingText: LocalizedStringKey?
@@ -32,6 +34,8 @@ struct DisclosureRowView: View {
       .background(Constants.Colors.seaDeep)
    }
 }
+
+// MARK: - Preview
 
 struct DisclosureRowView_Previews: PreviewProvider {
    static var previews: some View {

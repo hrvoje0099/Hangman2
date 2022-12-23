@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct ShapeButton: View {
    let text: String
    let image: String
@@ -28,6 +30,8 @@ struct ShapeButton: View {
       }
    }
 }
+
+// MARK: - Preview
 
 struct ShapeButton_Previews: PreviewProvider {
    static var previews: some View {

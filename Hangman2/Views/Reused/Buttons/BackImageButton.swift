@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct BackImageButton: View {
    let action: () -> Void
 
@@ -19,6 +21,9 @@ struct BackImageButton: View {
       }
    }
 }
+
+// MARK: - Preview
+
 struct BackImageButton_Previews: PreviewProvider {
     static var previews: some View {
        BackImageButton {}

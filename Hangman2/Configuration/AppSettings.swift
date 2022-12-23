@@ -12,5 +12,4 @@ final class AppSettings: ObservableObject {
    @AppStorage("app_theme") var appTheme: Theme = .dark
    @AppStorage("app_lang") var appLanguage: Language = .english
    @AppStorage("words_lang") var wordsLanguage: Language = .english
-   @AppStorage("game_difficulty") var gameDifficulty: Difficulty = .medium
 }

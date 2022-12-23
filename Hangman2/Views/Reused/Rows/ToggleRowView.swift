@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct ToggleRowView: View {
    let name: LocalizedStringKey
    let onImageName: String
    let offImageName: String
-   @Binding var bindValue: Bool
+   @State var isOn: Bool
    let action: (Bool) -> Void
 
    var body: some View {
@@ -29,12 +31,12 @@ struct ToggleRowView: View {
                Circle()
                   .frame(width: 25, height: 25)
                   .foregroundColor(Constants.Colors.galeForce)
-               Image(systemName: bindValue ?  onImageName : offImageName)
+               Image(systemName: isOn ?  onImageName : offImageName)
                   .foregroundColor(Constants.Colors.azulPetroleo)
             }
             .shadow(color: .black.opacity(0.14), radius: 4, x: 0, y: 2)
-            .offset(x: bindValue ? 10 : -10)
-            .animation(.spring(), value: bindValue)
+            .offset(x: isOn ? 10 : -10)
+            .animation(.spring(), value: isOn)
          }
       }
       .frame(height: 55)
@@ -42,11 +44,13 @@ struct ToggleRowView: View {
       .contentShape(Rectangle())
       .background(Constants.Colors.seaDeep)
       .onTapGesture {
-         bindValue.toggle()
-         action(bindValue)
+         isOn.toggle()
+         action(isOn)
       }
    }
 }
+
+// MARK: - Preview
 
 struct ToggleRowView_Previews: PreviewProvider {
    static var previews: some View {
@@ -54,7 +58,7 @@ struct ToggleRowView_Previews: PreviewProvider {
          name: "test",
          onImageName: Constants.Images.lightbulbFill,
          offImageName: Constants.Images.lightbulbSlashFill,
-         bindValue: .constant(false)
+         isOn: false
       ) { _ in
       }
    }

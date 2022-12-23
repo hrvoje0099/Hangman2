@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - Main View
+
 struct BackgroundImageView: View {
    let imageName: String
 
@@ -16,6 +18,9 @@ struct BackgroundImageView: View {
          .ignoresSafeArea()
    }
 }
+
+// MARK: - Preview
+
 struct BackgroundImageView_Previews: PreviewProvider {
    static var previews: some View {
       BackgroundImageView(imageName: Constants.Images.backgroundStart)
