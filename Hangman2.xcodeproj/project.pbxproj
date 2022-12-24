@@ -44,6 +44,7 @@
 		BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */; };
 		BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B4293B534700E0319F /* OverviewCardView.swift */; };
 		BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B7293B8D2C00E0319F /* GameView.swift */; };
+		BB7AE91C29565E4A003CE6FC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7AE91B29565E4A003CE6FC /* ActivityIndicator.swift */; };
 		BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */; };
 		BB7DEA7C2943DD190035F6C8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7B2943DD190035F6C8 /* Theme.swift */; };
 		BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */; };
@@ -111,6 +112,7 @@
 		BB78D9B2293AC46A00E0319F /* DifficultyRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyRateView.swift; sourceTree = "<group>"; };
 		BB78D9B4293B534700E0319F /* OverviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardView.swift; sourceTree = "<group>"; };
 		BB78D9B7293B8D2C00E0319F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		BB7AE91B29565E4A003CE6FC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelsPopupView.swift; sourceTree = "<group>"; };
 		BB7DEA7B2943DD190035F6C8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageView.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				BB7DEA8229448A430035F6C8 /* Buttons */,
 				BB5ACC62292D234500755A61 /* Rows */,
+				BB7AE91B29565E4A003CE6FC /* ActivityIndicator.swift */,
 				BB3F5427294765BB00337565 /* BackgroundImageView.swift */,
 				BB5ACC5E292D1BB900755A61 /* CustomNavigationView.swift */,
 				BB7DEA802943F8F60035F6C8 /* InfoPopupView.swift */,
@@ -565,6 +568,7 @@
 				BB5D42722935051C0077C9E5 /* CircularProgressView.swift in Sources */,
 				BB5ACC6A292D70F700755A61 /* WordsLanguageView.swift in Sources */,
 				BB4B9976294A152A006DB2CF /* CommonModifiers2.swift in Sources */,
+				BB7AE91C29565E4A003CE6FC /* ActivityIndicator.swift in Sources */,
 				BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */,
 				BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */,
 				BB3F542629473C3500337565 /* Bundle+Informations.swift in Sources */,

@@ -39,14 +39,15 @@ struct GameView: View {
                }
             }
             .setupCommonModifiers(backgroundColor: .clear, isPresented: (presentScoringSystemPopup || presentConfirmPopup))
-            .popup(isPresented: presentScoringSystemPopup, alignment: .center, direction: .top) {
-               ScoringSystemPopupView {
-                  presentScoringSystemPopup.toggle()
-               }
-            }
-            .popup(isPresented: presentConfirmPopup, alignment: .center, direction: .top) {
-               ConfirmPopupView { isGoBack in
-                  isGoBack ? dismiss() : presentConfirmPopup.toggle()
+            .popup(isPresented: presentScoringSystemPopup || presentConfirmPopup, alignment: .center, direction: .top) {
+               if presentScoringSystemPopup {
+                  ScoringSystemPopupView {
+                     presentScoringSystemPopup.toggle()
+                  }
+               } else {
+                  ConfirmPopupView { isGoBack in
+                     isGoBack ? dismiss() : presentConfirmPopup.toggle()
+                  }
                }
             }
             .onAppear {

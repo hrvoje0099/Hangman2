@@ -13,7 +13,7 @@ final class Networking: HttpClient {
 
    func get<T>(route: Route) -> AnyPublisher<T, Error> where T: Decodable {
       guard let url = URL(string: self.baseURL + route.endpoint) else {
-         return Fail(error: HttpError.invalidURL).eraseToAnyPublisher()
+         return Fail(error: NetworkingError.invalidURL).eraseToAnyPublisher()
       }
 
       var urlRequest = URLRequest(url: url)
@@ -23,16 +23,7 @@ final class Networking: HttpClient {
          .dataTaskPublisher(for: urlRequest)
          .map(\.data)
          .decode(type: T.self, decoder: JSONDecoder())
-//         .mapError { error in
-//            switch error {
-//            case is DecodingError:
-//               return .errorDecodingData
-//            case is URLError:
-//               return .badURL
-//            default:
-//               return .badResponse
-//            }
-//         }
+         .retry(2)
          .eraseToAnyPublisher()
    }
 }

@@ -9,19 +9,20 @@ import SwiftUI
 
 struct CommonModifiers2: ViewModifier {
    var backgroundColor: Color
+   var blurValue: CGFloat
    var isPresented: Bool
 
    func body(content: Content) -> some View {
       content
          .background(backgroundColor)
          .navigationBarBackButtonHidden()
-         .blur(radius: isPresented ? 3 : 0)
+         .blur(radius: isPresented ? blurValue : 0)
          .disabled(isPresented)
    }
 }
 
 extension View {
-   func setupCommonModifiers(backgroundColor: Color, isPresented: Bool) -> some View {
-      self.modifier(CommonModifiers2(backgroundColor: backgroundColor, isPresented: isPresented))
+   func setupCommonModifiers(backgroundColor: Color, blurValue: CGFloat = 4, isPresented: Bool) -> some View {
+      self.modifier(CommonModifiers2(backgroundColor: backgroundColor, blurValue: blurValue, isPresented: isPresented))
    }
 }

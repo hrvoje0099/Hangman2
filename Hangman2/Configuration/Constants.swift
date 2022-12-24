@@ -207,4 +207,12 @@ enum Constants {
    enum Request {
       static let baseURL      = "https://hrvoje0099.github.io/"
    }
+
+   enum WordsMock {
+      static let words = [
+         Word(word: "bad", hint: "bad things happen", difficulty: 1),
+         Word(word: "error", hint: "bad things happen", difficulty: 2),
+         Word(word: "disaster", hint: "bad things happen", difficulty: 3)
+      ]
+   }
 }

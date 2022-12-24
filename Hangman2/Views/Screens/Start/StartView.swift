@@ -28,15 +28,20 @@ struct StartView: View {
             }
          }
       }
+      .setupCommonModifiers(backgroundColor: .clear, blurValue: 10, isPresented: (presentInfoPopup || wordModel.showProgress))
       .onReceive(wordModel.$errorMessage) { errorMessage in
          if !errorMessage.isEmpty {
             infoMessage = errorMessage
             presentInfoPopup.toggle()
          }
       }
-      .popup(isPresented: presentInfoPopup, alignment: .center, direction: .top) {
-         InfoPopupView(text: LocalizedStringKey(infoMessage)) {
-            presentInfoPopup.toggle()
+      .popup(isPresented: presentInfoPopup || wordModel.showProgress, alignment: .center, direction: .top) {
+         if presentInfoPopup {
+            InfoPopupView(text: LocalizedStringKey(infoMessage)) {
+               presentInfoPopup.toggle()
+            }
+         } else {
+            ActivityIndicator()
          }
       }
    }

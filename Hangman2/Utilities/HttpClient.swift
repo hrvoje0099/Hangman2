@@ -20,25 +20,8 @@ enum HttpHeaders: String {
    case contentType = "Content-Type"
 }
 
-enum HttpError: Codable, Error {
-   case badURL
-   case badResponse
-   case errorDecodingData
+enum NetworkingError: Error {
    case invalidURL
-//   case unauthorized
-
-   var description: String {
-      switch self {
-      case .badURL:
-         return "Bad URL"
-      case .badResponse:
-         return "Bad Response"
-      case .errorDecodingData:
-         return "Error Decoding Data"
-      case .invalidURL:
-         return "Invalid URL"
-      }
-   }
 }
 
 protocol HttpClient {
