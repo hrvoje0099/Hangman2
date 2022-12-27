@@ -22,4 +22,28 @@ enum Difficulty: Int, Codable {
          return Constants.LocalisedString.hard
       }
    }
+
+   var dividerColor: Color {
+      switch self {
+      case .easy: return .green
+      case .medium: return .yellow
+      case .hard: return .red
+      }
+   }
+
+   var startColor: Color {
+      switch self {
+      case .easy: return .green.opacity(0.3)
+      case .medium: return .yellow.opacity(0.3)
+      case .hard: return .red.opacity(0.3)
+      }
+   }
+
+   var endColor: Color {
+      switch self {
+      case .easy: return Constants.Colors.bluewood
+      case .medium: return Constants.Colors.bluewood
+      case .hard: return Constants.Colors.bluewood
+      }
+   }
 }

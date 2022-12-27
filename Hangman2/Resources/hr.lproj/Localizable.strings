@@ -34,6 +34,7 @@
 "FEATURE_REQUEST"                = "Nova značajka";
 "GAME_LOST"                      = "Poraz";
 "GAME_WIN"                       = "Pobjeda";
+"GREEN"                          = "zelena";
 "HARD"                           = "Teško";
 "HARD_DIFFICULTY_LENGTH"         = "od 8 do max 11 slova";
 "HIGH_SCORES"                    = "Top rezultati";
@@ -58,10 +59,12 @@
 "PLAYED"                         = "Igrao";
 "QUIT_THE_GAME"                  = "Izaći iz igre?";
 "RATIO"                          = "Omjer";
+"RED"                            = "crvena";
 "REPORT_BUG"                     = "Prijavi bug";
 "RIGHT_LETTER"                   = "Pravo slovo";
 "SCORE"                          = "Rezultat";
 "SCORING_SYSTEM"                 = "Sustav bodovanja";
+"SEARCH_WITH_DOTS"               = "Pretraga ..";
 "SELECT_GAME_DIFFICULTY_LVL"     = "Odaberite razinu težine igre";
 "SETTINGS"                       = "Postavke";
 "SHOW_HINT"                      = "Prikaži nagovještaj";
@@ -74,10 +77,12 @@
 "WIN_RATE"                       = "Postotak pobijeda";
 "WIN_RATE_INFO"                  = "Ovdje vidite sveukupni postotak pobijeda kao omjer pobijeda/poraza te isti za svaki razinu težine.";
 "WINS"                           = "Pobijeda";
+"WORD_COLOR_PER_DIFFICULTY"      = "Boja riječi po težini";
 "WORD_LENGTH_PER_LEVEL"          = "Duljina riječi po razini";
 "WORDS"                          = "Riječi";
 "WORDS_LANGUAGE"                 = "Jezik riječi";
 "WRONG_GUESSES"                  = "Promašaji";
 "WRONG_LETTER"                   = "Pogrešno slovo";
+"YELLOW"                         = "žuta";
 "YES"                            = "Da";
 "YOUR_TOP_HIGH_SCORES"           = "Ovo je tvojih top 5 rezultata, za svaki rezultat možeš vidjeti:";

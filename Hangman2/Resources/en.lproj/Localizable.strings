@@ -34,6 +34,7 @@
 "FEATURE_REQUEST"                = "Feature Request";
 "GAME_LOST"                      = "Game Lost";
 "GAME_WIN"                       = "Game Win";
+"GREEN"                          = "green";
 "HARD"                           = "Hard";
 "HARD_DIFFICULTY_LENGTH"         = "from 8 to max 11 letters";
 "HIGH_SCORES"                    = "High Scores";
@@ -58,10 +59,12 @@
 "PLAYED"                         = "Played";
 "QUIT_THE_GAME"                  = "Quit the game?";
 "RATIO"                          = "Ratio";
+"RED"                            = "red";
 "REPORT_BUG"                     = "Report Bug";
 "RIGHT_LETTER"                   = "Right Letter";
 "SCORE"                          = "Score";
 "SCORING_SYSTEM"                 = "Scoring System";
+"SEARCH_WITH_DOTS"               = "Search ..";
 "SELECT_GAME_DIFFICULTY_LVL"     = "Select game difficulty level";
 "SETTINGS"                       = "Settings";
 "SHOW_HINT"                      = "Show Hint";
@@ -74,10 +77,12 @@
 "WIN_RATE"                       = "Win rate";
 "WIN_RATE_INFO"                  = "Here you see the overall win percentage as a win/loss ratio and the same for each difficulty level.";
 "WINS"                           = "Wins";
+"WORD_COLOR_PER_DIFFICULTY"      = "Word color per difficulty";
 "WORD_LENGTH_PER_LEVEL"          = "Word length per level";
 "WORDS"                          = "Words";
 "WORDS_LANGUAGE"                 = "Words language";
 "WRONG_GUESSES"                  = "Wrong Guesses";
 "WRONG_LETTER"                   = "Wrong Letter";
+"YELLOW"                         = "yellow";
 "YES"                            = "Yes";
 "YOUR_TOP_HIGH_SCORES"           = "This is your top 5 high scores, for each result you can see:";

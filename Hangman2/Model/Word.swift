@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Word: Codable, Identifiable {
+struct Word: Codable, Identifiable, Hashable {
    let id = UUID()
    var word: String
    var hint: String
-   var difficulty: Int
+   var difficulty: Difficulty
 
    enum CodingKeys: CodingKey {
       case word

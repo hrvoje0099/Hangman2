@@ -67,6 +67,9 @@ enum Constants {
       static let character7                  = "character7"
       static let character8                  = "character8"
       static let check                       = "check"
+      static let cleanText                   = "multiply.circle"
+      static let filterEmpty                 = "line.3.horizontal.decrease.circle"
+      static let filterFill                  = "line.3.horizontal.decrease.circle.fill"
       static let forward                     = "forward"
       static let forwardRed                  = "forward_red"
       static let github                      = "github"
@@ -78,6 +81,7 @@ enum Constants {
       static let lightbulbSlashFill          = "lightbulb.slash.fill"
       static let logoAppName                 = "logo_app_name"
       static let logoAppMock                 = "logo_app_mock"
+      static let magnifyingGlass             = "magnifyingglass"
       static let mePortrait                  = "me_portrait"
       static let moonFill                    = "moon.fill"
       static let score                       = "score"
@@ -146,6 +150,7 @@ enum Constants {
       static let featureRequest              = LocalizedStringKey("FEATURE_REQUEST")
       static let gameLost                    = LocalizedStringKey("GAME_LOST")
       static let gameWin                     = LocalizedStringKey("GAME_WIN")
+      static let green                       = LocalizedStringKey("GREEN")
       static let hard                        = LocalizedStringKey("HARD")
       static let hardDifficultyLength        = LocalizedStringKey("HARD_DIFFICULTY_LENGTH")
       static let highScores                  = LocalizedStringKey("HIGH_SCORES")
@@ -170,10 +175,12 @@ enum Constants {
       static let played                      = LocalizedStringKey("PLAYED")
       static let quitTheGame                 = LocalizedStringKey("QUIT_THE_GAME")
       static let ratio                       = LocalizedStringKey("RATIO")
+      static let red                         = LocalizedStringKey("RED")
       static let reportBug                   = LocalizedStringKey("REPORT_BUG")
       static let rightLetter                 = LocalizedStringKey("RIGHT_LETTER")
       static let score                       = LocalizedStringKey("SCORE")
       static let scoringSystem               = LocalizedStringKey("SCORING_SYSTEM")
+      static let searchWithDots              = LocalizedStringKey("SEARCH_WITH_DOTS")
       static let selectGameDifficultyLvl     = LocalizedStringKey("SELECT_GAME_DIFFICULTY_LVL")
       static let settings                    = LocalizedStringKey("SETTINGS")
       static let showHint                    = LocalizedStringKey("SHOW_HINT")
@@ -186,11 +193,13 @@ enum Constants {
       static let winRate                     = LocalizedStringKey("WIN_RATE")
       static let winRateInfo                 = LocalizedStringKey("WIN_RATE_INFO")
       static let wins                        = LocalizedStringKey("WINS")
+      static let wordColorPerDifficulty      = LocalizedStringKey("WORD_COLOR_PER_DIFFICULTY")
       static let wordLengthPerLevel          = LocalizedStringKey("WORD_LENGTH_PER_LEVEL")
       static let words                       = LocalizedStringKey("WORDS")
       static let wordsLanguage               = LocalizedStringKey("WORDS_LANGUAGE")
       static let wrongGuesses                = LocalizedStringKey("WRONG_GUESSES")
       static let wrongLetter                 = LocalizedStringKey("WRONG_LETTER")
+      static let yellow                      = LocalizedStringKey("YELLOW")
       static let yes                         = LocalizedStringKey("YES")
       static let yourTopHighScores           = LocalizedStringKey("YOUR_TOP_HIGH_SCORES")
    }
@@ -210,9 +219,9 @@ enum Constants {
 
    enum WordsMock {
       static let words = [
-         Word(word: "bad", hint: "bad things happen", difficulty: 1),
-         Word(word: "error", hint: "bad things happen", difficulty: 2),
-         Word(word: "disaster", hint: "bad things happen", difficulty: 3)
+         Word(word: "bad", hint: "bad things happen", difficulty: .easy),
+         Word(word: "error", hint: "bad things happen", difficulty: .medium),
+         Word(word: "disaster", hint: "bad things happen", difficulty: .hard)
       ]
    }
 }

@@ -45,6 +45,8 @@
 		BB78D9B5293B534700E0319F /* OverviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B4293B534700E0319F /* OverviewCardView.swift */; };
 		BB78D9B8293B8D2C00E0319F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB78D9B7293B8D2C00E0319F /* GameView.swift */; };
 		BB7AE91C29565E4A003CE6FC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7AE91B29565E4A003CE6FC /* ActivityIndicator.swift */; };
+		BB7AE91F29579673003CE6FC /* WordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7AE91E29579673003CE6FC /* WordCardView.swift */; };
+		BB7AE92329597E50003CE6FC /* WordsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7AE92229597E50003CE6FC /* WordsPopupView.swift */; };
 		BB7DEA7829432ED90035F6C8 /* DifficultyLevelsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */; };
 		BB7DEA7C2943DD190035F6C8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7B2943DD190035F6C8 /* Theme.swift */; };
 		BB7DEA7F2943E0610035F6C8 /* AppLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */; };
@@ -113,6 +115,8 @@
 		BB78D9B4293B534700E0319F /* OverviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCardView.swift; sourceTree = "<group>"; };
 		BB78D9B7293B8D2C00E0319F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		BB7AE91B29565E4A003CE6FC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		BB7AE91E29579673003CE6FC /* WordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardView.swift; sourceTree = "<group>"; };
+		BB7AE92229597E50003CE6FC /* WordsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsPopupView.swift; sourceTree = "<group>"; };
 		BB7DEA7729432ED90035F6C8 /* DifficultyLevelsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelsPopupView.swift; sourceTree = "<group>"; };
 		BB7DEA7B2943DD190035F6C8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BB7DEA7E2943E0610035F6C8 /* AppLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageView.swift; sourceTree = "<group>"; };
@@ -222,6 +226,16 @@
 				BB5ACC6B292D7C7800755A61 /* CheckRowView.swift */,
 			);
 			path = Rows;
+			sourceTree = "<group>";
+		};
+		BB7AE91D29579636003CE6FC /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE96F0292E69D300A9535D /* WordsListView.swift */,
+				BB7AE91E29579673003CE6FC /* WordCardView.swift */,
+				BB7AE92229597E50003CE6FC /* WordsPopupView.swift */,
+			);
+			path = Words;
 			sourceTree = "<group>";
 		};
 		BB7DEA7D2943E01E0035F6C8 /* Language */ = {
@@ -336,9 +350,9 @@
 			isa = PBXGroup;
 			children = (
 				BB71DC75291C62A3007B045D /* SettingsView.swift */,
-				BBCE96F0292E69D300A9535D /* WordsListView.swift */,
 				BBDA26FB29487B6900E610D2 /* Difficulty */,
 				BB7DEA7D2943E01E0035F6C8 /* Language */,
+				BB7AE91D29579636003CE6FC /* Words */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -598,6 +612,8 @@
 				BB5ACC6C292D7C7800755A61 /* CheckRowView.swift in Sources */,
 				BB5CF4772932559E00814D34 /* AppSettings.swift in Sources */,
 				BB78D9B3293AC46A00E0319F /* DifficultyRateView.swift in Sources */,
+				BB7AE92329597E50003CE6FC /* WordsPopupView.swift in Sources */,
+				BB7AE91F29579673003CE6FC /* WordCardView.swift in Sources */,
 				BB6E6B942948D3E200A4DF4D /* CharBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

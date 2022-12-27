@@ -50,7 +50,7 @@ struct EnglishKeyboardView: View {
          }
       }
       .frame(maxWidth: .infinity)
-      .padding([.top, .leading, .trailing], 10)
+      .padding(10)
       .background(Constants.Colors.seaDeep)
       .font(Constants.Fonts.patrickHandL)
       .foregroundColor(Constants.Colors.galeForce)

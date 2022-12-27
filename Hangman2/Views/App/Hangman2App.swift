@@ -11,7 +11,7 @@ import SwiftUI
 struct Hangman2App: App {
    @ObservedObject var appSettings = AppSettings.shared
 
-   @StateObject var model = WordModel(wordService: WordService())
+   private var model = WordModel(wordService: WordService())
 
    var body: some Scene {
       WindowGroup {

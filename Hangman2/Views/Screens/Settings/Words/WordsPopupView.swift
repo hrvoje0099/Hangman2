@@ -1,5 +1,5 @@
 //
-// DifficultyLevelsPopupView
+// WordsPopupView
 // Hangman2
 //
 // Created by Hrvoje
@@ -9,12 +9,12 @@ import SwiftUI
 
 // MARK: - Main View
 
-struct DifficultyLevelsPopupView: View {
+struct WordsPopupView: View {
    let action: () -> Void
 
    var body: some View {
       VStack {
-         Text(Constants.LocalisedString.difficultyLevels)
+         Text(Constants.LocalisedString.listOfAllWords)
             .font(Constants.Fonts.patrickHandL)
             .textCase(.uppercase)
             .padding(.bottom, 10)
@@ -23,33 +23,36 @@ struct DifficultyLevelsPopupView: View {
             .background(Constants.Colors.dugong)
 
          Group {
-            Text(Constants.LocalisedString.chooseDifficulty)
+            Text(Constants.LocalisedString.listOfAllWordsInfo)
                .postfixedWithSpacerInHStack()
 
             Divider()
                .background(Constants.Colors.dugong)
 
-            Text(Constants.LocalisedString.wordLengthPerLevel)
+            Text(Constants.LocalisedString.wordColorPerDifficulty)
                .postfixedWithSpacerInHStack()
                .textCase(.uppercase)
 
             HStack(spacing: 0) {
                Text(Constants.LocalisedString.easy)
                Text(":").postfixedWithSpacer()
-               Text(Constants.LocalisedString.easyDifficultyLength)
+               Text(Constants.LocalisedString.green)
+                  .foregroundColor(.green)
             }
             .padding(.top, -15)
 
             HStack(spacing: 0) {
                Text(Constants.LocalisedString.medium)
                Text(":").postfixedWithSpacer()
-               Text(Constants.LocalisedString.mediumDifficultyLength)
+               Text(Constants.LocalisedString.yellow)
+                  .foregroundColor(.yellow)
             }
 
             HStack(spacing: 0) {
                Text(Constants.LocalisedString.hard)
                Text(":").postfixedWithSpacer()
-               Text(Constants.LocalisedString.hardDifficultyLength)
+               Text(Constants.LocalisedString.red)
+                  .foregroundColor(.red)
             }
          }
          .font(Constants.Fonts.patrickHandS)
@@ -66,18 +69,8 @@ struct DifficultyLevelsPopupView: View {
 
 // MARK: - Preview
 
-struct DifficultyLevelsPopupView_Previews: PreviewProvider {
+struct WordsPopupView_Previews: PreviewProvider {
    static var previews: some View {
-      DifficultyLevelsPopupView {}
-         .environment(\.locale, .init(identifier: "hr"))
-         .preferredColorScheme(.dark)
-         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
-         .previewDisplayName("iPhone 14 Pro")
-
-      DifficultyLevelsPopupView {}
-         .environment(\.locale, .init(identifier: "en"))
-         .preferredColorScheme(.light)
-         .previewDevice(PreviewDevice(rawValue: "iPhone 13 mini"))
-         .previewDisplayName("iPhone 13 mini")
+      WordsPopupView { }
    }
 }

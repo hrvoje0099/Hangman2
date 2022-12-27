@@ -17,7 +17,7 @@ final class WordModel: ObservableObject {
    @Published var showProgress = true
 
    private let wordService: WordService
-   private var cancellables = Set<AnyCancellable>()
+   private var cancellables: AnyCancellable?
 
    // MARK: - Init
 
@@ -37,7 +37,7 @@ final class WordModel: ObservableObject {
 
    func getRandomWord() -> Word? {
       let currentDifficulty = GlobalSettings.gameDifficulty
-      let wordsByDifficulty = allWords.filter { $0.difficulty == currentDifficulty.rawValue }
+      let wordsByDifficulty = allWords.filter { $0.difficulty == currentDifficulty }
       return wordsByDifficulty.randomElement()
    }
 
@@ -45,7 +45,7 @@ final class WordModel: ObservableObject {
 
    private func getAllWords(route: Route) {
       self.showProgress = true
-      wordService.getAllWords(route: route)
+      cancellables = wordService.getAllWords(route: route)
          .receive(on: DispatchQueue.main)
          .sink { completion in
             switch completion {
@@ -60,6 +60,5 @@ final class WordModel: ObservableObject {
             guard let self else { return }
             self.allWords = englishWords
          }
-         .store(in: &cancellables)
    }
 }

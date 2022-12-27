@@ -27,10 +27,8 @@ enum OverviewType {
 
    var endColor: Color {
       switch self {
-      case .good:
-         return Constants.Colors.bluewood
-      case .bad:
-         return Constants.Colors.bluewood
+      case .good: return Constants.Colors.bluewood
+      case .bad: return Constants.Colors.bluewood
       }
    }
 }
