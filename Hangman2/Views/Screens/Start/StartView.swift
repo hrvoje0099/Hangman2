@@ -116,6 +116,12 @@ private struct GameButtons: View {
 
 struct StartView_Previews: PreviewProvider {
    static var previews: some View {
-      StartView()
+      Group {
+         StartView().environmentObject({ () -> WordModel in
+            let wordModel = WordModel(wordService: WordService())
+            wordModel.getAllWords()
+            return wordModel
+         }())
+      }
    }
 }
