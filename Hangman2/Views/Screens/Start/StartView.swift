@@ -43,6 +43,9 @@ struct StartView: View {
       .popup(isPresented: appModel.showProgress, alignment: .center, direction: .top) {
          ActivityIndicator()
       }
+      .task {
+         appModel.getAllWords()
+      }
    }
 }
 

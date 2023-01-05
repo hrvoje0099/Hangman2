@@ -24,9 +24,6 @@ struct Hangman2App: App {
             .environment(\.locale, .init(identifier: appSettings.appLanguage.location))
             .environment(\.managedObjectContext, CoreDataManager.shared.persistentContainer.viewContext)
             .environmentObject(appModel)
-            .task {
-               appModel.getAllWords()
-            }
       }
    }
 }

@@ -221,8 +221,11 @@ enum Constants {
    enum WordsMock {
       static let words = [
          Word(word: "bad", hint: "bad things happen", difficulty: .easy),
+         Word(word: "badd", hint: "bad things happen", difficulty: .easy),
          Word(word: "error", hint: "bad things happen", difficulty: .medium),
-         Word(word: "disaster", hint: "bad things happen", difficulty: .hard)
+         Word(word: "errorr", hint: "bad things happen", difficulty: .medium),
+         Word(word: "disaster", hint: "bad things happen", difficulty: .hard),
+         Word(word: "disasterr", hint: "bad things happen", difficulty: .hard)
       ]
    }
 }
