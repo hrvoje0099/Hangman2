@@ -14,6 +14,8 @@ struct StatisticsView: View {
 
    @State private var presentWinRateInfoPopup = false
 
+   @EnvironmentObject private var appModel: AppModel
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.statistics) {
@@ -43,24 +45,24 @@ extension StatisticsView {
          }
 
          HStack {
-            CircularProgressView(progressValue: 0.596)
+            CircularProgressView(progressValue: appModel.getTotalWinRate())
                .frame(width: 140, height: 140)
                .padding(15)
 
             VStack {
                VStack(spacing: 5) {
-                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: 1.00)
-                  SegmentedProgressView(progress: 100, length: 6)
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyEasy, rateValue: appModel.getTotalWinRate(by: .easy))
+                  SegmentedProgressView(progress: appModel.getTotalWinRate(by: .easy), length: 6)
                }
                Spacer()
                VStack(spacing: 5) {
-                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: 0.54)
-                  SegmentedProgressView(progress: 54, length: 6)
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyMedium, rateValue: appModel.getTotalWinRate(by: .medium))
+                  SegmentedProgressView(progress: appModel.getTotalWinRate(by: .medium), length: 6)
                }
                Spacer()
                VStack(spacing: 5) {
-                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: 0.25)
-                  SegmentedProgressView(progress: 25, length: 6)
+                  DifficultyRateView(difficultyName: Constants.LocalisedString.difficultyHard, rateValue: appModel.getTotalWinRate(by: .hard))
+                  SegmentedProgressView(progress: appModel.getTotalWinRate(by: .hard), length: 6)
                }
             }
             .frame(height: 140)
@@ -79,23 +81,17 @@ private struct Overview: View {
 
       Grid(alignment: .leading, horizontalSpacing: 0) {
          GridRow {
-            OverviewCardView(title: Constants.LocalisedString.played, value: "532", type: .good)
-            OverviewCardView(title: Constants.LocalisedString.wins, value: "369", type: .good)
-            OverviewCardView(title: Constants.LocalisedString.losses, value: "152", type: .bad)
+            OverviewCardView(title: Constants.LocalisedString.played, value: String(GlobalSettings.wins + GlobalSettings.losses), type: .good)
+            OverviewCardView(title: Constants.LocalisedString.perfectWins, value: String(GlobalSettings.perfectWins), type: .good)
          }
-         .frame(maxWidth: .infinity)
          GridRow {
-            OverviewCardView(title: Constants.LocalisedString.perfectWins, value: "11", type: .good)
-            OverviewCardView(title: Constants.LocalisedString.longestGame, value: "2h 12m 12s", type: .good)
-            OverviewCardView(title: Constants.LocalisedString.highestScore, value: "5321", type: .good)
+            OverviewCardView(title: Constants.LocalisedString.wins, value: String(GlobalSettings.wins), type: .good)
+            OverviewCardView(title: Constants.LocalisedString.longestGame, value: GlobalSettings.longestGame.convertTimeToString(), type: .good)
          }
-         .frame(maxWidth: .infinity)
          GridRow {
-            OverviewCardView(title: Constants.LocalisedString.hits, value: "1073", type: .good)
-            OverviewCardView(title: Constants.LocalisedString.wrongGuesses, value: "221", type: .bad)
-            OverviewCardView(title: Constants.LocalisedString.totalTime, value: "22h 11m", type: .bad)
+            OverviewCardView(title: Constants.LocalisedString.losses, value: String(GlobalSettings.losses), type: .bad)
+            OverviewCardView(title: Constants.LocalisedString.totalTime, value: GlobalSettings.totalTime.convertTimeToString(), type: .bad)
          }
-         .frame(maxWidth: .infinity)
       }
       .padding(15)
    }

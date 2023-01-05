@@ -19,8 +19,8 @@ enum Route: RouteProtocol {
 
    var endpoint: String {
       switch self {
-      case .englishWords: return "english_words.json"
-      case .croatianWords: return "croatian_words.json"
+      case .englishWords: return "english_wdords.json"
+      case .croatianWords: return "croatian_dwords.json"
       }
    }
 

@@ -15,6 +15,10 @@ enum Constants {
       static let croatian  = ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"] // 30
    }
 
+   enum API {
+      static let baseURL      = "https://hrvoje0099.github.io/"
+   }
+
    enum Colors {
       static let azulPetroleo       = Color("azulPetroleo")       // Color(red: 054/255, green: 072/255, blue: 080/255)
       static let blackBox           = Color("blackBox")           // Color(red: 012/255, green: 039/255, blue: 049/255)
@@ -34,7 +38,6 @@ enum Constants {
       static let sanJuan            = Color("sanJuan")            // Color(red: 069/255, green: 088/255, blue: 096/255)
       static let seaDeep            = Color("seaDeep")            // Color(red: 043/255, green: 062/255, blue: 071/255)
       static let watermelon         = Color("watermelon")         // Color(red: 255/255, green: 115/255, blue: 123/255)
-      static let white              = Color.white
    }
 
    enum Fonts {
@@ -80,7 +83,6 @@ enum Constants {
       static let lightbulbFill               = "lightbulb.fill"
       static let lightbulbSlashFill          = "lightbulb.slash.fill"
       static let logoAppName                 = "logo_app_name"
-      static let logoAppMock                 = "logo_app_mock"
       static let magnifyingGlass             = "magnifyingglass"
       static let mePortrait                  = "me_portrait"
       static let moonFill                    = "moon.fill"
@@ -118,6 +120,8 @@ enum Constants {
       static let appDevelopmentProcess       = LocalizedStringKey("APP_DEVELOPMENT_PROCESS")
       static let appLanguage                 = LocalizedStringKey("APP_LANGUAGE")
       static let application                 = LocalizedStringKey("APPLICATION")
+      static let betterLuckNextTime          = LocalizedStringKey("BETTER_LUCK_NEXT_TIME")
+      static let bravo                       = LocalizedStringKey("BRAVO")
       static let chooseAppLanguage           = LocalizedStringKey("CHOOSE_APP_LANGUAGE")
       static let chooseDifficulty            = LocalizedStringKey("CHOOSE_DIFFICULTY")
       static let chooseWordsLanguage         = LocalizedStringKey("CHOOSE_WORDS_LANGUAGE")
@@ -148,14 +152,14 @@ enum Constants {
       static let englishWords                = LocalizedStringKey("ENGLISH_WORDS")
       static let exitWillLoseGameProgress    = LocalizedStringKey("EXIT_WILL_LOSE_GAME_PROGRESS")
       static let featureRequest              = LocalizedStringKey("FEATURE_REQUEST")
+      static let gameOver                    = LocalizedStringKey("GAME_OVER")
       static let gameLost                    = LocalizedStringKey("GAME_LOST")
       static let gameWin                     = LocalizedStringKey("GAME_WIN")
       static let green                       = LocalizedStringKey("GREEN")
       static let hard                        = LocalizedStringKey("HARD")
       static let hardDifficultyLength        = LocalizedStringKey("HARD_DIFFICULTY_LENGTH")
+      static let hiddenWord                  = LocalizedStringKey("HIDDEN_WORD")
       static let highScores                  = LocalizedStringKey("HIGH_SCORES")
-      static let highestScore                = LocalizedStringKey("HIGHEST_SCORE")
-      static let hits                        = LocalizedStringKey("HITS")
       static let info                        = LocalizedStringKey("INFO")
       static let language                    = LocalizedStringKey("LANGUAGE")
       static let languageInfo                = LocalizedStringKey("LANGUAGE_INFO")
@@ -166,6 +170,7 @@ enum Constants {
       static let medium                      = LocalizedStringKey("MEDIUM")
       static let mediumDifficultyLength      = LocalizedStringKey("MEDIUM_DIFFICULTY_LENGTH")
       static let misc                        = LocalizedStringKey("MISC")
+      static let newGame                     = LocalizedStringKey("NEW_GAME")
       static let no                          = LocalizedStringKey("NO")
       static let ok                          = LocalizedStringKey("OK")
       static let options                     = LocalizedStringKey("OPTIONS")
@@ -186,7 +191,7 @@ enum Constants {
       static let showHint                    = LocalizedStringKey("SHOW_HINT")
       static let statistics                  = LocalizedStringKey("STATISTICS")
       static let time                        = LocalizedStringKey("TIME")
-      static let topFiveScores               = LocalizedStringKey("TOP_FIVE_SCORES")
+      static let topTenScores                = LocalizedStringKey("TOP_TEN_SCORES")
       static let totalTime                   = LocalizedStringKey("TOTAL_TIME")
       static let twoPlayers                  = LocalizedStringKey("TWO_PLAYERS")
       static let unableToSendEmail           = LocalizedStringKey("UNABLE_TO_SEND_EMAIL")
@@ -197,10 +202,10 @@ enum Constants {
       static let wordLengthPerLevel          = LocalizedStringKey("WORD_LENGTH_PER_LEVEL")
       static let words                       = LocalizedStringKey("WORDS")
       static let wordsLanguage               = LocalizedStringKey("WORDS_LANGUAGE")
-      static let wrongGuesses                = LocalizedStringKey("WRONG_GUESSES")
       static let wrongLetter                 = LocalizedStringKey("WRONG_LETTER")
       static let yellow                      = LocalizedStringKey("YELLOW")
       static let yes                         = LocalizedStringKey("YES")
+      static let youFoundCorrectWord         = LocalizedStringKey("YOU_FOUND_CORRECT_WORD")
       static let yourTopHighScores           = LocalizedStringKey("YOUR_TOP_HIGH_SCORES")
    }
 
@@ -211,10 +216,6 @@ enum Constants {
       static let linkedIn                    = "LinkedIn"
       static let twitter                     = "Twitter"
       static let youtube                     = "YouTube"
-   }
-
-   enum Request {
-      static let baseURL      = "https://hrvoje0099.github.io/"
    }
 
    enum WordsMock {

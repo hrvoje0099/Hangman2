@@ -2,6 +2,8 @@
 "APP_DEVELOPMENT_PROCESS"        = "Cijeli razvojni proces aplikacije vidljiv je na:";
 "APP_LANGUAGE"                   = "Jezik aplikacije";
 "APPLICATION"                    = "Aplikacija";
+"BETTER_LUCK_NEXT_TIME"          = "Više sreće sljedeći put";
+"BRAVO"                          = "Bravo!";
 "CHOOSE_APP_LANGUAGE"            = "Odaberite jezik aplikacije";
 "CHOOSE_DIFFICULTY"              = "Ovisno koju razinu odaberete, mijenja se i duljina riječi koja vam se može pojaviti u igri.";
 "CHOOSE_WORDS_LANGUAGE"          = "Odaberite jezik riječi";
@@ -32,14 +34,14 @@
 "ENGLISH_WORDS"                  = "Engleske riječi";
 "EXIT_WILL_LOSE_GAME_PROGRESS"   = "Ako izađete izgubit će te sav napredak u igri.";
 "FEATURE_REQUEST"                = "Nova značajka";
+"GAME_OVER"                      = "Kraj igre!";
 "GAME_LOST"                      = "Poraz";
 "GAME_WIN"                       = "Pobjeda";
 "GREEN"                          = "zelena";
 "HARD"                           = "Teško";
 "HARD_DIFFICULTY_LENGTH"         = "od 8 do max 11 slova";
+"HIDDEN_WORD"                    = "Skrivena riječ:";
 "HIGH_SCORES"                    = "Top rezultati";
-"HIGHEST_SCORE"                  = "Najbolji rezultat";
-"HITS"                           = "Pogodci";
 "INFO"                           = "Info";
 "LANGUAGE"                       = "Jezik";
 "LANGUAGE_INFO"                  = "Možete zasebno odabrati jezik aplikacije i jezik riječi koje će se pojavljivati u igri.";
@@ -50,6 +52,7 @@
 "MEDIUM"                         = "Srednje";
 "MEDIUM_DIFFICULTY_LENGTH"       = "od 5 do max 7 slova";
 "MISC"                           = "Razno";
+"NEW_GAME"                       = "Nova igra";
 "NO"                             = "Ne";
 "OK"                             = "OK";
 "OPTIONS"                        = "Opcije";
@@ -70,7 +73,7 @@
 "SHOW_HINT"                      = "Prikaži nagovještaj";
 "STATISTICS"                     = "Statistika";
 "TIME"                           = "Vrijeme";
-"TOP_FIVE_SCORES"                = "Top 5 Rezultata";
+"TOP_TEN_SCORES"                 = "Top 10 Rezultata";
 "TOTAL_TIME"                     = "Ukupno vrijeme";
 "TWO_PLAYERS"                    = "Dva igrača";
 "UNABLE_TO_SEND_EMAIL"           = "Nije moguće poslati e-mail s ovog uređaja.";
@@ -81,8 +84,8 @@
 "WORD_LENGTH_PER_LEVEL"          = "Duljina riječi po razini";
 "WORDS"                          = "Riječi";
 "WORDS_LANGUAGE"                 = "Jezik riječi";
-"WRONG_GUESSES"                  = "Promašaji";
 "WRONG_LETTER"                   = "Pogrešno slovo";
 "YELLOW"                         = "žuta";
 "YES"                            = "Da";
+"YOU_FOUND_CORRECT_WORD"         = "Našli ste pravu riječ!";
 "YOUR_TOP_HIGH_SCORES"           = "Ovo je tvojih top 5 rezultata, za svaki rezultat možeš vidjeti:";

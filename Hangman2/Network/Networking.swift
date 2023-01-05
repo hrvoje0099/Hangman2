@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 final class Networking: HttpClient {
-   let baseURL = Constants.Request.baseURL
+   let baseURL = Constants.API.baseURL
 
    func get<T>(route: Route) -> AnyPublisher<T, Error> where T: Decodable {
       guard let url = URL(string: self.baseURL + route.endpoint) else {
@@ -23,7 +23,7 @@ final class Networking: HttpClient {
          .dataTaskPublisher(for: urlRequest)
          .map(\.data)
          .decode(type: T.self, decoder: JSONDecoder())
-         .retry(2)
+         .retry(222)
          .eraseToAnyPublisher()
    }
 }

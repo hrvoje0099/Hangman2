@@ -11,7 +11,7 @@ import SwiftUI
 
 struct OverviewCardView: View {
    let title: LocalizedStringKey
-   let value: LocalizedStringKey
+   let value: String
    let type: OverviewType
 
    var body: some View {
@@ -26,8 +26,11 @@ struct OverviewCardView: View {
             Text(value)
                .font(Constants.Fonts.patrickHandS)
          }
+
+         Spacer()
       }
-      .frame(width: 110, height: 50, alignment: .leading)
+      .frame(maxWidth: .infinity)
+      .frame(height: 50)
       .background(
          LinearGradient(
             gradient: Gradient(

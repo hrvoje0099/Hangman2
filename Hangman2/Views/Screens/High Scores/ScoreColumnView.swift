@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ScoreColumnView: View {
    let title: LocalizedStringKey
-   let value: String
+   let value: LocalizedStringKey
 
    var body: some View {
       VStack {

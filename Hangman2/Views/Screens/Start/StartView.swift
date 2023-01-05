@@ -10,10 +10,10 @@ import SwiftUI
 // MARK: - Main View
 
 struct StartView: View {
-   @EnvironmentObject private var wordModel: WordModel
+   @EnvironmentObject private var appModel: AppModel
 
-   @State private var presentInfoPopup = false
    @State private var infoMessage = ""
+   @State private var presentInfoPopup = false
 
    var body: some View {
       NavigationStack {
@@ -28,21 +28,20 @@ struct StartView: View {
             }
          }
       }
-      .setupCommonModifiers(backgroundColor: .clear, blurValue: 10, isPresented: (presentInfoPopup || wordModel.showProgress))
-      .onReceive(wordModel.$errorMessage) { errorMessage in
+      .setupCommonModifiers(backgroundColor: .clear, blurValue: 10, isPresented: (presentInfoPopup || appModel.showProgress))
+      .onReceive(appModel.$errorMessage) { errorMessage in
          if !errorMessage.isEmpty {
             infoMessage = errorMessage
             presentInfoPopup.toggle()
          }
       }
-      .popup(isPresented: presentInfoPopup || wordModel.showProgress, alignment: .center, direction: .top) {
-         if presentInfoPopup {
-            InfoPopupView(text: LocalizedStringKey(infoMessage)) {
-               presentInfoPopup.toggle()
-            }
-         } else {
-            ActivityIndicator()
+      .popup(isPresented: presentInfoPopup, alignment: .center, direction: .top) {
+         InfoPopupView(text: LocalizedStringKey(infoMessage)) {
+            presentInfoPopup.toggle()
          }
+      }
+      .popup(isPresented: appModel.showProgress, alignment: .center, direction: .top) {
+         ActivityIndicator()
       }
    }
 }
@@ -109,19 +108,5 @@ private struct GameButtons: View {
          }
       }
       .padding(.bottom, 50)
-   }
-}
-
-// MARK: - Preview
-
-struct StartView_Previews: PreviewProvider {
-   static var previews: some View {
-      Group {
-         StartView().environmentObject({ () -> WordModel in
-            let wordModel = WordModel(wordService: WordService())
-            wordModel.getAllWords()
-            return wordModel
-         }())
-      }
    }
 }

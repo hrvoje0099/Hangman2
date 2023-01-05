@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - Main View
 
 struct CharBox: View {
-   let text: String
+   let letter: Letter
    let width: CGFloat
    let action: () -> Void
 
@@ -18,12 +18,14 @@ struct CharBox: View {
       Button {
          action()
       } label: {
-         Text(text)
+         Text(letter.text)
             .frame(width: width, height: 40, alignment: .center)
-            .background(Constants.Colors.azulPetroleo)
+            .background(letter.status.color)
             .cornerRadius(10)
             .shadow(color: Constants.Colors.ebonyClay, radius: 0, x: 0, y: 5)
+            .textCase(.uppercase)
       }
+      .disabled(letter.isDisabled)
    }
 }
 
@@ -31,6 +33,7 @@ struct CharBox: View {
 
 struct CharBox_Previews: PreviewProvider {
     static var previews: some View {
-       CharBox(text: "A", width: 40) {}
+       let letterA = Letter(text: "a", isDisabled: false, status: .unselected)
+       CharBox(letter: letterA, width: 40) {}
     }
 }

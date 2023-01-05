@@ -11,40 +11,45 @@ import SwiftUI
 
 struct CroatianKeyboardView: View {
    let geometry: GeometryProxy
-   let action: (String) -> Void
+   let action: (Letter) -> Void
+
+   @EnvironmentObject private var appModel: AppModel
 
    var body: some View {
       VStack(spacing: 12) {
-         let screenWidth = geometry.size.width
-         let padding = CGFloat(65)
-         HStack(spacing: 5) {
-            ForEach((0...7), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.croatian[index])", width: abs((screenWidth - padding) / 8)) {
-                  action(Constants.Alphabet.croatian[index])
+         if appModel.letters.count == Constants.Alphabet.croatian.count {
+            let screenWidth = geometry.size.width
+            let padding = CGFloat(65)
+
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[0...7]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 8)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((8...14), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.croatian[index])", width: abs((screenWidth - padding) / 8)) {
-                  action(Constants.Alphabet.croatian[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[8...14]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 8)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((15...22), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.croatian[index])", width: abs((screenWidth - padding) / 8)) {
-                  action(Constants.Alphabet.croatian[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[15...22]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 8)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((23...29), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.croatian[index])", width: abs((screenWidth - padding) / 8)) {
-                  action(Constants.Alphabet.croatian[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[23...29]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 8)) {
+                     action(letter)
+                  }
                }
             }
          }

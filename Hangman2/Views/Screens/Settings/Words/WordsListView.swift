@@ -13,7 +13,7 @@ struct WordsListView: View {
    @Environment(\.dismiss) var dismiss
 
    @State private var presentWordsInfoPopup = false
-   @EnvironmentObject private var wordModel: WordModel
+   @EnvironmentObject private var appModel: AppModel
 
    @State private var searchText = ""
    @State private var presentFilterByDifficulty = false
@@ -28,7 +28,7 @@ struct WordsListView: View {
       }
       .setupCommonModifiers(backgroundColor: Constants.Colors.bluewood, isPresented: presentWordsInfoPopup)
       .onAppear {
-         searchResults = wordModel.allWords
+         searchResults = appModel.allWords
       }
       .popup(isPresented: presentWordsInfoPopup, alignment: .center, direction: .top) {
          WordsPopupView {
@@ -51,17 +51,17 @@ struct WordsListView: View {
 
    private func search() {
       if searchText.isEmpty {
-         searchResults = wordModel.allWords
+         searchResults = appModel.allWords
       } else {
-         searchResults = wordModel.allWords.filter { $0.word.contains(searchText) }
+         searchResults = appModel.allWords.filter { $0.word.contains(searchText) }
       }
    }
 
    private func filterBy(difficulty: Difficulty) {
       if searchText.isEmpty {
-         searchResults = wordModel.allWords.filter { $0.difficulty == difficulty }
+         searchResults = appModel.allWords.filter { $0.difficulty == difficulty }
       } else {
-         searchResults = wordModel.allWords.filter { $0.word.contains(searchText) }
+         searchResults = appModel.allWords.filter { $0.word.contains(searchText) }
          searchResults = searchResults.filter { $0.difficulty == difficulty }
       }
    }
@@ -92,7 +92,7 @@ extension WordsListView {
                .textInputAutocapitalization(.never)
                .onChange(of: searchText) { _ in
                   if presentFilterByDifficulty {
-                     searchResults = wordModel.allWords
+                     searchResults = appModel.allWords
                      withAnimation {
                         presentFilterByDifficulty = false
                      }
@@ -174,20 +174,6 @@ extension WordsListView {
          .padding(.top, 10)
 
          Spacer()
-      }
-   }
-}
-
-// MARK: - Preview
-
-struct WordsListView_Previews: PreviewProvider {
-   static var previews: some View {
-      Group {
-         WordsListView().environmentObject({ () -> WordModel in
-            let wordModel = WordModel(wordService: WordService())
-            wordModel.getAllWords()
-            return wordModel
-         }())
       }
    }
 }

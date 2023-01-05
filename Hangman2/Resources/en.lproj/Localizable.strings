@@ -2,6 +2,8 @@
 "APP_DEVELOPMENT_PROCESS"        = "The entire development process of the app is visible at:";
 "APP_LANGUAGE"                   = "App Language";
 "APPLICATION"                    = "Application";
+"BETTER_LUCK_NEXT_TIME"          = "Better luck next time";
+"BRAVO"                          = "Bravo!";
 "CHOOSE_APP_LANGUAGE"            = "Choose app language";
 "CHOOSE_DIFFICULTY"              = "Depending on which level you choose, the length of words that can appear in the game also changes.";
 "CHOOSE_WORDS_LANGUAGE"          = "Choose words language";
@@ -32,14 +34,14 @@
 "ENGLISH_WORDS"                  = "English Words";
 "EXIT_WILL_LOSE_GAME_PROGRESS"   = "If you exit you will lose all game progress.";
 "FEATURE_REQUEST"                = "Feature Request";
+"GAME_OVER"                      = "Game Over!";
 "GAME_LOST"                      = "Game Lost";
 "GAME_WIN"                       = "Game Win";
 "GREEN"                          = "green";
 "HARD"                           = "Hard";
 "HARD_DIFFICULTY_LENGTH"         = "from 8 to max 11 letters";
+"HIDDEN_WORD"                    = "Hidden Word:";
 "HIGH_SCORES"                    = "High Scores";
-"HIGHEST_SCORE"                  = "Highest Score";
-"HITS"                           = "Hits";
 "INFO"                           = "Info";
 "LANGUAGE"                       = "Language";
 "LANGUAGE_INFO"                  = "You can separately choose the language of the application and the language of the words that will appear in the game.";
@@ -50,6 +52,7 @@
 "MEDIUM"                         = "Medium";
 "MEDIUM_DIFFICULTY_LENGTH"       = "from 5 to max 7 letters";
 "MISC"                           = "Misc";
+"NEW_GAME"                       = "New Game";
 "NO"                             = "No";
 "OK"                             = "OK";
 "OPTIONS"                        = "Options";
@@ -70,7 +73,7 @@
 "SHOW_HINT"                      = "Show Hint";
 "STATISTICS"                     = "Statistics";
 "TIME"                           = "Time";
-"TOP_FIVE_SCORES"                = "Top 5 High Scores";
+"TOP_TEN_SCORES"                 = "Top 10 High Scores";
 "TOTAL_TIME"                     = "Total Time";
 "TWO_PLAYERS"                    = "Two players";
 "UNABLE_TO_SEND_EMAIL"           = "Unable to send an email from this device.";
@@ -81,8 +84,8 @@
 "WORD_LENGTH_PER_LEVEL"          = "Word length per level";
 "WORDS"                          = "Words";
 "WORDS_LANGUAGE"                 = "Words language";
-"WRONG_GUESSES"                  = "Wrong Guesses";
 "WRONG_LETTER"                   = "Wrong Letter";
 "YELLOW"                         = "yellow";
 "YES"                            = "Yes";
+"YOU_FOUND_CORRECT_WORD"         = "You found the correct word!";
 "YOUR_TOP_HIGH_SCORES"           = "This is your top 5 high scores, for each result you can see:";

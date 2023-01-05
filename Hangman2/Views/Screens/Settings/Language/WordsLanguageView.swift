@@ -12,7 +12,7 @@ import SwiftUI
 struct WordsLanguageView: View {
    @Environment(\.dismiss) var dismiss
 
-   @EnvironmentObject private var wordModel: WordModel
+   @EnvironmentObject private var appModel: AppModel
 
    @Binding var wordsLanguage: Language
 
@@ -49,7 +49,7 @@ struct WordsLanguageView: View {
 
    private func changeWordsLanguage(to wordsLanguage: Language) {
       self.wordsLanguage = wordsLanguage
-      wordModel.getAllWords()
+      appModel.getAllWords()
    }
 }
 

@@ -13,6 +13,21 @@ enum GlobalSettings {
 
    @UserDefault(key: "game_difficulty", defaultValue: .medium)
    static var gameDifficulty: Difficulty
+
+   @UserDefault(key: "wins", defaultValue: 0)
+   static var wins: Int
+
+   @UserDefault(key: "losses", defaultValue: 0)
+   static var losses: Int
+
+   @UserDefault(key: "perfect_wins", defaultValue: 0)
+   static var perfectWins: Int
+
+   @UserDefault(key: "longest_game", defaultValue: 0)
+   static var longestGame: Int
+
+   @UserDefault(key: "total_time", defaultValue: 0)
+   static var totalTime: Int
 }
 
 @propertyWrapper

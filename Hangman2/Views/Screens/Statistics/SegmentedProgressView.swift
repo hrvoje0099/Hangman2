@@ -48,7 +48,7 @@ struct SegmentedProgressView: View {
                .mask(alignment: .leading) {
                   Capsule()
                      .frame(height: self.height)
-                     .frame(maxWidth: geo.size.width * (progressState / 100), alignment: .leading)
+                     .frame(maxWidth: geo.size.width * progressState, alignment: .leading)
                }
 
             HStack {

@@ -11,40 +11,45 @@ import SwiftUI
 
 struct EnglishKeyboardView: View {
    let geometry: GeometryProxy
-   let action: (String) -> Void
+   let action: (Letter) -> Void
+
+   @EnvironmentObject private var appModel: AppModel
 
    var body: some View {
       VStack(spacing: 12) {
-         let screenWidth = geometry.size.width
-         let padding = CGFloat(65)
-         HStack(spacing: 5) {
-            ForEach((0...6), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.english[index])", width: abs((screenWidth - padding) / 7)) {
-                  action(Constants.Alphabet.english[index])
+         if appModel.letters.count == Constants.Alphabet.english.count {
+            let screenWidth = geometry.size.width
+            let padding = CGFloat(65)
+
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[0...6]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 7)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((7...12), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.english[index])", width: abs((screenWidth - padding) / 6)) {
-                  action(Constants.Alphabet.english[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[7...12]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 6)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((13...19), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.english[index])", width: abs((screenWidth - padding) / 7)) {
-                  action(Constants.Alphabet.english[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[13...19]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 7)) {
+                     action(letter)
+                  }
                }
             }
-         }
 
-         HStack(spacing: 5) {
-            ForEach((20...25), id: \.self) { index in
-               CharBox(text: "\(Constants.Alphabet.english[index])", width: abs((screenWidth - padding) / 6)) {
-                  action(Constants.Alphabet.english[index])
+            HStack(spacing: 5) {
+               ForEach(appModel.letters[20...25]) { letter in
+                  CharBox(letter: letter, width: abs((screenWidth - padding) / 6)) {
+                     action(letter)
+                  }
                }
             }
          }
@@ -54,20 +59,5 @@ struct EnglishKeyboardView: View {
       .background(Constants.Colors.seaDeep)
       .font(Constants.Fonts.patrickHandL)
       .foregroundColor(Constants.Colors.galeForce)
-   }
-}
-
-// MARK: - Preview
-
-struct EnglishKeyboardView_Previews: PreviewProvider {
-   static var previews: some View {
-      GeometryReader { geometry in
-         VStack {
-            Spacer()
-            EnglishKeyboardView(geometry: geometry) { char in
-               print(char)
-            }
-         }
-      }
    }
 }

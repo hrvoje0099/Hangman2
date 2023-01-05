@@ -14,6 +14,8 @@ struct HighScoresView: View {
 
    @State private var presentHighScoresInfoPopup = false
 
+   @EnvironmentObject private var appModel: AppModel
+
    var body: some View {
       VStack {
          CustomNavigationView(title: Constants.LocalisedString.highScores) {
@@ -37,20 +39,28 @@ extension HighScoresView {
    private var highScoresView: some View {
       Group {
          Section {
-            ForEach((1...5).reversed(), id: \.self) { _ in
-               HStack {
-                  ScoreColumnView(title: Constants.LocalisedString.date, value: "01.01.22").postfixedWithSpacer()
-                  ScoreColumnView(title: Constants.LocalisedString.score, value: "3500").postfixedWithSpacer()
-                  ScoreColumnView(title: Constants.LocalisedString.ratio, value: "15/05").postfixedWithSpacer()
-                  ScoreColumnView(title: Constants.LocalisedString.difficulty, value: "Easy").postfixedWithSpacer()
-                  ScoreColumnView(title: Constants.LocalisedString.time, value: "23m 41s")
+            ScrollViewIfNeeded {
+               ForEach(appModel.getHighScores()) { highScore in
+                  HStack(spacing: 0) {
+                     ScoreColumnView(title: Constants.LocalisedString.date, value: LocalizedStringKey(highScore.date))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                     ScoreColumnView(title: Constants.LocalisedString.score, value: LocalizedStringKey(highScore.score.description))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                     ScoreColumnView(title: Constants.LocalisedString.ratio, value: LocalizedStringKey(highScore.ratio))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                     ScoreColumnView(title: Constants.LocalisedString.difficulty, value: highScore.difficulty)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                     ScoreColumnView(title: Constants.LocalisedString.time, value: LocalizedStringKey(highScore.time))
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                  }
+                  .frame(minWidth: 0, maxWidth: .infinity)
+                  .padding([.leading, .trailing], 10)
+                  .padding([.top, .bottom], 5)
+                  .background(Constants.Colors.seaDeep)
                }
-               .padding([.leading, .trailing], 20)
-               .padding([.top, .bottom], 5)
-               .background(Constants.Colors.seaDeep)
             }
          } header: {
-            SectionHeaderView(text: Constants.LocalisedString.topFiveScores, withInfo: true) {
+            SectionHeaderView(text: Constants.LocalisedString.topTenScores, withInfo: true) {
                presentHighScoresInfoPopup.toggle()
             }
             .padding(.bottom, 10)
