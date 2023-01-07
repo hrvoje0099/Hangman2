@@ -23,7 +23,7 @@ final class Networking: HttpClient {
          .dataTaskPublisher(for: urlRequest)
          .map(\.data)
          .decode(type: T.self, decoder: JSONDecoder())
-         .retry(222)
+         .retry(2)
          .eraseToAnyPublisher()
    }
 }
